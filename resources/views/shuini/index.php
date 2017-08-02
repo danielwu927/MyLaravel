@@ -31,7 +31,7 @@
                         <a href="#hero" style="padding-right:20px;">最新资讯</a>
                         <a href="#survey" style="padding-right:20px;">用户手册</a>
                         <a href="login.html" style="padding-right:20px;" target="_blank">账户登录</a>
-                        <a href="home.html" style="padding-right:20px;" target="_blank">后台管理</a>
+                        <a href="home.php" style="padding-right:20px;" target="_blank">后台管理</a>
                     </ul>
                 </nav>              
             </div><!-- /.container -->
@@ -292,7 +292,7 @@
                         </li>
                         <li id="dianhua" style="display: none; font-size: 15px; height: 200px;">
                         <img style="width: 149px; height: 150px" alt="" src="img/clients/SJ.png">
-                        <div style="margin-left: 10px; font-weight: 600px">扫一扫添加手机号码</div>
+                        <div style="margin-left: 10px; font-weight: 600">扫一扫添加手机号码</div>
                         </li>
                     </span>
                 </div>
