@@ -22,4 +22,11 @@ class SitesController extends Controller
         return view('shuini.index');
     }
 
+    public function loginAuth(){
+        return view('shuini.login');
+    }
+    public function register(){
+        return view('shuini.register');
+    }
+
 }

@@ -11,8 +11,12 @@
 |
 */
 
-Route::get('/', 'SitesController@index');
+Route::get('/', 'SitesController@index');      //根目录显示首页
 
-Route::get('about','SitesController@about');
+Route::get('shuini', 'SitesController@index');
+
+Route::get('register.php','SitesController@register');   //注册页面
 
 Route::get('aaaa','SitesController@aaaa');
+
+Route::get('login.php','SitesController@loginAuth');      //登录页面

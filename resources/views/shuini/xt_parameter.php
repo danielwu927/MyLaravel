@@ -125,7 +125,7 @@
                         <a href="#"><i class="fa fa-gears"></i>系统控制面板<span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
-                                <a href="xt_parameter.html"><i class="fa fa-gear"></i>系统参数</a>
+                                <a href="xt_parameter.php"><i class="fa fa-gear"></i>系统参数</a>
                             </li>
                         </ul>
                     </li>                  

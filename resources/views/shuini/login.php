@@ -33,7 +33,7 @@
                             <div class="input_outer">
                                 <span class="u_user"></span>
                                 <input name="logname" class="text" id="new_yanzhengma" placeholder="请输入验证码">
-                                <a><img src="../shuini/yanzhengma.html" id="yanzhengmaImg"></a>
+                                <a><img src="yanzhengma.php" id="yanzhengmaImg"></a>
                             </div>
                             <div class="row">
                                 <div class="col-xs-8"><a href="register.php" class="text-center" style="color:#FFFFFF">注册新账户</a></div>

@@ -30,7 +30,7 @@
                         <a href="#about" style="padding-right:20px;">关于我们</a>
                         <a href="#hero" style="padding-right:20px;">最新资讯</a>
                         <a href="#survey" style="padding-right:20px;">用户手册</a>
-                        <a href="login.html" style="padding-right:20px;" target="_blank">账户登录</a>
+                        <a href="login.php" style="padding-right:20px;" target="_blank">账户登录</a>
                         <a href="home.php" style="padding-right:20px;" target="_blank">后台管理</a>
                     </ul>
                 </nav>              
@@ -288,7 +288,7 @@
                         </li>
                         <li id="weixin" style="display: none; font-size: 15px;">
                         <img style="width: 150px; height: 150px" alt="" src="img/clients/WX.jpg">
-                        <div style="margin-left: 20px; font-weight: 600px">扫一扫添加微信</div>
+                        <div style="margin-left: 20px; font-weight: 600">扫一扫添加微信</div>
                         </li>
                         <li id="dianhua" style="display: none; font-size: 15px; height: 200px;">
                         <img style="width: 149px; height: 150px" alt="" src="img/clients/SJ.png">
