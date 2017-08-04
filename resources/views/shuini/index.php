@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="navbar-header"><!--右侧标签-->
                     <a class="navbar-brand" href="#">
-                        <img src="img/logo-whut.png" width="400" height="50"/></a>
+                        <img src="img/logo-whut.png" width="400" height="60"/></a>
                 </div>
                 <nav class="nav fl">
                     <ul style="margin-left: 100px; float: left; line-height: 90px; font-size:20px">

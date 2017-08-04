@@ -24,28 +24,28 @@
                         <form action="#" name="f" method="post">
                             <div class="input_outer" style="margin:10px;border:0;padding:0;">
                                 <span class="u_user"></span>
-                                <input name="logname" class="text" type="text" id="userID" value="" placeholder="请输入用户名">
+                                <input name="logname" style="color:whitesmoke" class="text" type="text" id="userID" value="" placeholder="请输入用户名">
                             </div>
                             <div class="input_outer" style="margin:10px;border:0;padding:0;">
                                 <span class="us_uer"></span>
-                                <input name="logpass" class="text" type="email" id="email" value="" placeholder="请输入邮箱">
+                                <input name="logpass" style="color:whitesmoke" class="text" type="email" id="email" value="" placeholder="请输入邮箱">
                             </div>
                             
                             <div class="input_outer" style="margin:10px;border:0;padding:0;">
                                 <span class="u_user"></span>
-                                <input name="logname" class="text" type="text" id="username" value="" placeholder="请输入课题组（如XXX水泥厂）">
+                                <input name="logname" style="color:whitesmoke" class="text" type="text" id="username" value="" placeholder="请输入课题组（如XXX水泥厂）">
                             </div>
                             <div class="input_outer" style="margin:10px;border:0;padding:0;">
                                 <span class="u_user"></span>
-                                <input name="logname" class="text" type="password" id="password" value="" placeholder="请输入密码">
+                                <input name="logname" style="color:whitesmoke" class="text" type="password" id="password" value="" placeholder="请输入密码">
                             </div>
                             <div class="input_outer" style="margin:10px;border:0;padding:0;">
                                 <span class="u_user"></span>
-                                <input name="logname" class="text" type="password" id="repassword" value="" placeholder="请确认密码">
+                                <input name="logname" style="color:whitesmoke" class="text" type="password" id="repassword" value="" placeholder="请确认密码">
                             </div>
                             <div class="input_outer" style="margin:10px;border:0;padding:0;">
                                 <span class="u_user"></span>
-                                <input name="logname" class="text" id="check" placeholder="请输入描述信息，加速管理员审核">
+                                <input name="logname" style="color:whitesmoke" class="text" id="check" placeholder="请输入描述信息，加速管理员审核">
             
                             </div>
                             <div class="row">

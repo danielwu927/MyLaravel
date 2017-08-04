@@ -24,15 +24,16 @@
                         <form action="#" name="f" method="post">
                             <div class="input_outer">
                                 <span class="u_user"></span>
-                                <input name="logname" class="text" type="text" id="new_userID" value="" placeholder="请输入账户">
+
+                                <input name="logname" class="text" type="text" id="new_userID" style="color:whitesmoke" value="" placeholder="请输入账户">
                             </div>
                             <div class="input_outer">
                                 <span class="us_uer"></span>
-                                <input name="logpass" class="text" type="password" id="new_password" value="" placeholder="请输入密码">
+                                <input name="logpass" class="text" type="password" id="new_password" style="color:whitesmoke" value="" placeholder="请输入密码">
                             </div>
                             <div class="input_outer">
                                 <span class="u_user"></span>
-                                <input name="logname" class="text" id="new_yanzhengma" placeholder="请输入验证码">
+                                <input name="logname" class="text" id="new_yanzhengma" style="color:whitesmoke" placeholder="请输入验证码">
                                 <a><img src="yanzhengma.php" id="yanzhengmaImg"></a>
                             </div>
                             <div class="row">
