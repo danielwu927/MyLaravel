@@ -49,7 +49,7 @@
             
                             </div>
                             <div class="row">
-                                <div class="col-xs-8"><a href="login.php" class="text-center" style="color:#FFFFFF">已有账户</a></div>
+                                <div class="col-xs-8"><a href="/login" class="text-center" style="color:#FFFFFF">已有账户</a></div>
                                
                                     <div style="text-align:center;">
                                     <div  class="frend-link" style="width:150px;margin:0 auto;"><span><button class="act-but submit btn-flat btn-block btn-primary btn" href="javascript:;" style="color: #FFFFFF ">确认注册</button></span>

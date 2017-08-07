@@ -124,7 +124,7 @@
                         <a href="#"><i class="fa fa-gears"></i>系统控制面板<span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
-                                <a href="xt_parameter.php"><i class="fa fa-gear"></i>系统参数</a>
+                                <a href="system_parameter.php"><i class="fa fa-gear"></i>系统参数</a>
                             </li>
                         </ul>
                     </li>                  
@@ -146,7 +146,7 @@
                         <div class="main-box mb-dull">
                             <a href="#">
                                 <i class="fa fa-group fa-5x"></i>
-                                <a href="yh_manage.php"><h5>用户管理</h5></a>
+                                <a href="user_manage.php"><h5>用户管理</h5></a>
                             </a>
                         </div>
                     </div>
@@ -154,7 +154,7 @@
                         <div class="main-box mb-dull">
                             <a href="#">
                                 <i class="fa fa-bar-chart-o fa-5x"></i>
-                                <a href="wj_template.php"><h5 >问卷模板管理</h5></a>
+                                <a href="surveys_template.php"><h5 >问卷模板管理</h5></a>
                             </a>
                         </div>
                     </div>
@@ -162,7 +162,7 @@
                         <div class="main-box mb-dull">
                             <a href="#">
                                 <i class="fa fa-unlock-alt fa-5x"></i>
-                                <a href="jk_list.php"><h5>权限控制</h5></a>
+                                <a href="implements_list.php"><h5>权限控制</h5></a>
                             </a>
                         </div>
                     </div>
@@ -170,7 +170,7 @@
                         <div class="main-box mb-dull">
                             <a href="#">
                                 <i class="fa fa-gears fa-5x"></i>
-                                <a href="xt_parameter.php"><h5>系统管理</h5></a>
+                                <a href="system_parameter.php"><h5>系统管理</h5></a>
                             </a>
                         </div>
                     </div>

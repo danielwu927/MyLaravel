@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 //sitescontroller
 
-class SitesController extends Controller
+class PagesController extends Controller
 {
-    //
+    //页面控制器，用于控制主页站点的页面跳转
     public function index(){
         return view('shuini.index');
     }
@@ -17,16 +17,21 @@ class SitesController extends Controller
 
         return view('sites.about');
     }
-    public function aaaa(){
+    public function surveyPage(){
 
-        return view('shuini.index');
+        return view('sites.surveys');
     }
 
-    public function loginAuth(){
+    public function login(){
         return view('shuini.login');
     }
     public function register(){
         return view('shuini.register');
     }
+
+    public function home(){
+        return view('shuini.home');
+    }
+
 
 }
