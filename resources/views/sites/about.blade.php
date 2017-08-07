@@ -10,7 +10,9 @@
 </head>
 <body>
     <?php
-    echo 'about page';
+    echo 'about page';echo '<br>';
+
    ?>
+    <h1>hello {{$first}} {{$last}}</h1>
 </body>
 </html>

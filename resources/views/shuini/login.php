@@ -25,7 +25,7 @@
                             <div class="input_outer">
                                 <span class="u_user"></span>
 
-                                <input name="logname" class="text" type="text" id="new_userID" style="color:whitesmoke" value="" placeholder="请输入账户">
+                                <input name="logname" class="text" type="text" id="new_userID" style="color:whitesmoke" value="" placeholder="请输入用户名">
                             </div>
                             <div class="input_outer">
                                 <span class="us_uer"></span>

@@ -30,7 +30,7 @@
                         <a href="#about" style="padding-right:20px;">关于我们</a>
                         <a href="#hero" style="padding-right:20px;">最新资讯</a>
                         <a href="#survey" style="padding-right:20px;">用户手册</a>
-                        <a href="/login" style="padding-right:20px;" target="_blank">账户登录</a>
+                        <a href="/auth/login" style="padding-right:20px;" target="_blank">账户登录</a>
                         <a href="/home" style="padding-right:20px;" target="_blank">后台管理</a>
                     </ul>
                 </nav>              

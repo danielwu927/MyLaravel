@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 //sitescontroller
 
-class PagesController extends Controller
+class SitesController extends Controller
 {
     //页面控制器，用于控制主页站点的页面跳转
     public function index(){
@@ -15,18 +13,31 @@ class PagesController extends Controller
 
     public function about(){
 
-        return view('sites.about');
+        $name='wudi';
+        $data=[];
+        $data['first']='wu';
+        $data['last'] ='di';
+        return view('sites.about',$data);
     }
     public function surveyPage(){
 
         return view('sites.surveys');
     }
 
-    public function login(){
+    public function getLogin(){
         return view('shuini.login');
     }
-    public function register(){
+
+    public function postLogin(){
+        return view();
+    }
+
+    public function getRegister(){
         return view('shuini.register');
+    }
+    public function postRegister()
+    {
+        ;
     }
 
     public function home(){
