@@ -20,6 +20,8 @@ Route::get('/home','SitesController@home')->name('showHome');
 
 Route::get('about','SitesController@about');
 
+
+
 Route::group(['middleware'=>'auth'],function (){                  //定义路由组
     Route::get('auth/register','SitesController@getRegister')->name('showRegister');   //显示注册页面
 
@@ -29,7 +31,6 @@ Route::group(['middleware'=>'auth'],function (){                  //定义路由
 
     Route::post('auth/login','SitesController@postLogin');      //验证登录
 });
-Route::post('/submit','RegisterController@show');
 
 Auth::routes();
 

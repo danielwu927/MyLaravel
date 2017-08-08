@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">注册信息</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="/submit">
+                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -60,16 +60,32 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="description" class="col-md-4 control-label">备注信息</label>
+
+                            <div class="col-md-6">
+                                <input id="description" type="text" class="form-control" name="description" value="{{ old('description') }}" required>
+
+                                @if ($errors->has('description'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('description') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('role') ? ' has-error' : '' }}">
                             <label for="role" class="col-md-4 control-label">用户类别</label>
 
                             <div class="col-md-6">
 
                                     <label>请选择</label>
-                                    <select name="">
+                                    <select name="role" id="role">
                                         <option value="0">课题组成员</option>
                                         <option value="1">水泥厂用户</option>
                                         <option value="2">专家组成员</option>
+                                        <option value="3">游客</option>
                                     </select>
 
 
