@@ -11,24 +11,25 @@
 |
 */
 
-Route::get('/', 'SitesController@index');      //根目录显示网站首页
 
-Route::get('shuini', 'SitesController@index');
+Route::get('/', 'SitesController@index')->name('homePage');      //根目录显示网站首页
 
-Route::get('auth/register','SitesController@getRegister');   //显示注册页面
+Route::get('shuini', 'SitesController@index')->name('homePage');
 
-Route::post('auth/register','SitesController@postRegister');  //验证注册
-
-Route::get('auth/login','SitesController@getLogin');      //显示登录界面
-
-Route::post('auth/login','SitesController@postLogin');      //验证登录
-
-Route::get('/home','SitesController@home');
+Route::get('/home','SitesController@home')->name('showHome');
 
 Route::get('about','SitesController@about');
 
+Route::group(['middleware'=>'auth'],function (){                  //定义路由组
+    Route::get('auth/register','SitesController@getRegister')->name('showRegister');   //显示注册页面
 
+    Route::post('auth/register','SitesController@postRegister');  //验证注册
 
+    Route::get('auth/login','SitesController@getLogin')->name('showLogin');      //显示登录界面
+
+    Route::post('auth/login','SitesController@postLogin');      //验证登录
+});
+Route::post('/submit','RegisterController@show');
 
 Auth::routes();
 

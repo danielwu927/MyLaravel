@@ -25,7 +25,7 @@ class SitesController extends Controller
     }
 
     public function getLogin(){
-        return view('shuini.login');
+        return view('auth.login');
     }
 
     public function postLogin(){
@@ -33,7 +33,7 @@ class SitesController extends Controller
     }
 
     public function getRegister(){
-        return view('shuini.register');
+        return view('auth.register');
     }
     public function postRegister()
     {
