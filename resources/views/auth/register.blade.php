@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">注册信息</div>
+                <div class="panel-heading">欢迎注册</div>
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
@@ -82,10 +82,10 @@
 
                                     <label>请选择</label>
                                     <select name="role" id="role">
-                                        <option value="0">课题组成员</option>
-                                        <option value="1">水泥厂用户</option>
-                                        <option value="2">专家组成员</option>
-                                        <option value="3">游客</option>
+                                        <option value="1">游客</option>
+                                        <option value="2">课题组成员</option>
+                                        <option value="3">专家组成员</option>
+                                        <option value="4">水泥厂用户</option>
                                     </select>
 
 

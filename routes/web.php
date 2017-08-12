@@ -11,19 +11,21 @@
 |
 */
 
-
 Route::get('/', 'SitesController@index')->name('homePage');      //根目录显示网站首页
 
 Route::get('shuini', 'SitesController@index')->name('homePage');
 
-Route::get('/home','SitesController@home')->name('showHome');
+Route::get('admin/home','SitesController@showAdminHome')->name('showAdminHome');
 
 Route::group(['middleware'=>'auth'],function (){                  //定义路由组
     Route::get('auth/register','SitesController@getRegister')->name('showRegister');   //显示注册页面
 
     Route::get('auth/login','SitesController@getLogin')->name('showLogin');      //显示登录界面
 });
-
+Route::get('/user_page','SitesController@userPage');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
