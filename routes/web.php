@@ -22,7 +22,7 @@ Route::group(['middleware'=>'auth'],function (){                  //定义路由
 
     Route::get('auth/login','SitesController@getLogin')->name('showLogin');      //显示登录界面
 });
-Route::get('/user_page','SitesController@userPage');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

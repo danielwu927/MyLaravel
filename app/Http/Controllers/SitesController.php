@@ -29,10 +29,7 @@ class SitesController extends Controller
     public function getRegister(){
         return view('auth.register');
     }
-    public function userPage()
-    {
-        return view('shuini.userpage');
-    }
+
 
     public function showAdminHome(){
         return view('shuini.admin_home');
