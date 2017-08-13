@@ -11,20 +11,14 @@ class SitesController extends Controller
         return view('shuini.index');
     }
 
-    public function about(){
 
-        $name='wudi';
-        $data=[];
-        $data['first']='wu';
-        $data['last'] ='di';
-        return view('sites.about',$data);
-    }
     public function surveyPage(){
 
         return view('sites.surveys');
     }
 
     public function getLogin(){
+
         return view('auth.login');
     }
 
@@ -35,13 +29,13 @@ class SitesController extends Controller
     public function getRegister(){
         return view('auth.register');
     }
-    public function postRegister()
+    public function userPage()
     {
-        ;
+        return view('shuini.userpage');
     }
 
-    public function home(){
-        return view('shuini.home');
+    public function showAdminHome(){
+        return view('shuini.admin_home');
     }
 
 
