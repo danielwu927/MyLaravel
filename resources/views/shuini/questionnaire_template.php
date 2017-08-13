@@ -58,16 +58,16 @@
                         </div>
                     </li>
                     <li>
-                        <a class="active-menu" href="home.html"><i class="fa fa-dashboard "></i>主面板</a>
+                        <a class="active-menu" href="admin_home.php"><i class="fa fa-dashboard "></i>主面板</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-desktop "></i>新闻与通知<span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
-                                <a href="panel-tabs.html"><i class="fa fa-bell"></i>新闻中心</a>
+                                <a href="news_list.php"><i class="fa fa-bell"></i>新闻中心</a>
                             </li>
                             <li>
-                                <a href="notification.html"><i class="fa fa-bell "></i>通知中心</a>
+                                <a href="notice_list.php"><i class="fa fa-bell "></i>通知中心</a>
                             </li>                                                     
                         </ul>
                     </li>
@@ -75,10 +75,10 @@
                         <a href="#"><i class="fa fa-bar-chart-o"></i>问卷管理<span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
-                                <a href="invoice.html"><i class="fa fa-file-excel-o"></i>新建问卷模板</a>
+                                <a href="new_create_questionnaire_template.php"><i class="fa fa-file-excel-o"></i>新建问卷模板</a>
                             </li>
                             <li>
-                                <a href="pricing.html"><i class="fa fa-file-excel-o"></i>问卷模板列表</a>
+                                <a href="questionnaire_template.php"><i class="fa fa-file-excel-o"></i>问卷模板列表</a>
                             </li>                                                     
                         </ul>
                     </li>
@@ -86,10 +86,10 @@
                         <a href="#"><i class="fa fa-file-sound-o"></i>问卷邀请管理<span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
-                                <a href="invoice.html"><i class="fa fa-file-text"></i>登记问卷邀请</a>
+                                <a href="register_questionnaire_invite.php"><i class="fa fa-file-text"></i>登记问卷邀请</a>
                             </li>
                             <li>
-                                <a href="pricing.html"><i class="fa fa-file-text"></i>问卷邀请列表</a>
+                                <a href="questionnaire_invite.php"><i class="fa fa-file-text"></i>问卷邀请列表</a>
                             </li>                          
                         </ul>
                     </li>
@@ -97,10 +97,10 @@
                         <a href="#"><i class="fa fa-group"></i>用户管理<span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">                           
                              <li>
-                                <a href="form.html"><i class="fa fa-user"></i>创建用户</a>
+                                <a href="create_user.php"><i class="fa fa-user"></i>创建用户</a>
                             </li>
                              <li>
-                                <a href="form-advance.html"><i class="fa fa-user"></i>用户列表</a>
+                                <a href="user_list.php"><i class="fa fa-user"></i>用户列表</a>
                             </li>                          
                         </ul>
                     </li>                    
@@ -108,16 +108,16 @@
                         <a href="#"><i class="fa fa-unlock-alt"></i>权限管理 <span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
-                                <a href="#"><i class="fa fa-key"></i>接口列表</a>
+                                <a href="port_list.php"><i class="fa fa-key"></i>接口列表</a>
                             </li>
                              <li>
-                                <a href="#"><i class="fa fa-key"></i>新建接口</a>
+                                <a href="new_create_port.php"><i class="fa fa-key"></i>新建接口</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-key"></i>角色列表</a>
+                                <a href="role_list.php"><i class="fa fa-key"></i>角色列表</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-key"></i>新建角色</a>
+                                <a href="new_create_role.php"><i class="fa fa-key"></i>新建角色</a>
                             </li>
                         </ul>
                     </li>
@@ -125,7 +125,7 @@
                         <a href="#"><i class="fa fa-gears"></i>系统控制面板<span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
-                                <a href="xt_parameter.html"><i class="fa fa-gear"></i>系统参数</a>
+                                <a href="system_parameter.php"><i class="fa fa-gear"></i>系统参数</a>
                             </li>
                         </ul>
                     </li>                  
@@ -137,73 +137,73 @@
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="page-head-line">创建新用户</h1>
-                        <h1 class="page-subhead-line">您可以在此处创建新用户。</h1>
+                        <h1 class="page-head-line">问卷模板列表</h1>
+                        <h1 class="page-subhead-line">您可以管理已经创建的问卷模板，或创建新的问卷模板。</h1>
                     </div>
                 </div> <!-- row -->
                
                 <div class="content body">
-                    <a class="btn btn-primary btn-flat" id="check_userlist">查看用户列表</a>
-                    <div class="box box-primary">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">填写用户信息</h3>
+                    <a href="new_create_questionnaire_template.php" class="btn btn-primary btn-flat" id="createNew_template">创建新模板</a><br><br>
+                    <div class="box box-body box-primary">
+                    <div id="wjTemplateTable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                    <div class="row"><div class="col-sm-6"></div>
+                    <div class="col-sm-6"></div>
+                    </div>
+                    <div class="row">
+                    <div class="col-sm-12">
+                    <table id="wjTemplateTable" class="table table-hover table-responsive dataTable no-footer" role="grid" aria-describedby="wjTemplateTable_info" style="width: 1015px;">
+                    <thead>
+                        <tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 131px;">问卷名称</th>
+                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 236px;">问卷描述</th>
+                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 184px;">生效时间</th>
+                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 194px;">失效时间</th>
+                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 68px;">状态</th>
+                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 142px;">操作</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr role="row" class="odd"><td>2015信息简表</td>
+                        <td>2015</td><td>2016/6/1 上午8:00 </td>
+                        <td>2017/6/3 上午8:00 </td>
+                        <td>已发布</td>
+                        <td><button class="btn btn-primary btn-xs btn-show btn-flat" data-id="81">查看问卷</button>                                       
+                        <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="81">删除</button></td>
+                        </tr>
+                        <tr role="row" class="even">
+                        <td>测试问卷</td>
+                        <td>这是一个用来测试的问卷</td>
+                        <td>2017/1/4 上午8:00 </td>
+                        <td>2017/1/6 上午8:00 </td>
+                        <td>已发布</td>
+                        <td><button class="btn btn-primary btn-xs btn-show btn-flat" data-id="83">查看问卷</button>                                       
+                        <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="83">删除</button></td>
+                        </tr>
+                        <tr role="row" class="odd">
+                        <td>2018水泥模板</td>
+                        <td>最新版本</td>
+                        <td>2017/7/1 上午8:00 </td>
+                        <td>2020/2/11 上午8:00 </td>
+                        <td>已发布</td>
+                        <td><button class="btn btn-primary btn-xs btn-show btn-flat" data-id="84">查看问卷</button>                                      
+                        <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="84">删除</button></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-sm-5">
+                        <div class="dataTables_info" id="wjTemplateTable_info" role="status" aria-live="polite">第 1 页 / 总 1 页</div>
+                    </div>
+                    <div class="col-sm-7" align="right">
+                        <div class="dataTables_paginate paging_simple_numbers" id="wjTemplateTable_paginate">
+                            <ul class="pagination">
+                            <li class="paginate_button previous disabled" id="wjTemplateTable_previous"><a href="#" aria-controls="wjTemplateTable" data-dt-idx="0" tabindex="0">上一页</a></li>
+                            <li class="paginate_button active"><a href="#" aria-controls="wjTemplateTable" data-dt-idx="1" tabindex="0">1</a></li>
+                            <li class="paginate_button next disabled" id="wjTemplateTable_next"><a href="#" aria-controls="wjTemplateTable" data-dt-idx="2" tabindex="0">下一页</a></li>
+                            </ul>
                         </div>
-                        <form role="form">
-                            <div class="box-body">
-                                <div class="form-group">
-                                    <label for="accountId">用户名</label>
-                                    <input class="form-control" id="accountId" placeholder="请输入用户名" type="text">
-                                </div>
-                                <div class="form-group">
-                                    <label for="password">密码</label>
-                                    <input class="form-control" id="password" placeholder="请输入初始密码" type="text">
-                                </div>
-                                <div class="form-group">
-                                    <label for="description">描述</label>
-                                    <input class="form-control" id="description" placeholder="请输入相关描述信息" type="text">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">邮箱</label>
-                                    <input class="form-control" id="email" placeholder="请输入邮箱" type="text">
-                                </div>
-                                <div class="form-group">
-                                    <label for="status">选择用户状态</label>
-                                    <select class="form-control" id="status">
-                                        <option value="1">激活</option>
-                                        <option value="2">冻结</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="factoryId">选择用户所在水泥厂</label>
-                                    <select class="form-control" id="factoryId">
-                                        <option value="-1">测试用水泥厂</option>
-                                        <option value="1">1</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="roleList">用户角色</label>
-                                    <div id="roleList">
-                                        <table class="table table-responsive">
-                                        <tbody>
-                                            <tr>
-                                                <td><input value="19" name="role" type="checkbox">管理员</td>
-                                                <td><input value="20" name="role" type="checkbox">项目组负责人</td>
-                                                <td><input value="22" name="role" type="checkbox">水泥厂用户</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input value="23" name="role" type="checkbox">课题组负责人</td>
-                                                <td><input value="24" name="role" type="checkbox">专家组</td>
-                                                <td><input value="25" name="role" type="checkbox">课题组成员</td>
-                                            </tr>
-                                        </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="box-footer" align="right">
-                                <input class="btn btn-primary btn-flat" id="submit" value="创建用户" type="button">
-                            </div>
-                        </form>
+                    </div>
+                    </div>
                     </div>
                 </div><!--content body-->
             </div><!--page-inner  -->

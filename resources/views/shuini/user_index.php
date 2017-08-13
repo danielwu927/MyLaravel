@@ -292,11 +292,11 @@
                         </li>
                         <li id="weixin" style="display: none; font-size: 15px;">
                         <img style="width: 150px; height: 150px" alt="" src="img/clients/WX.jpg">
-                        <div style="margin-left: 20px; font-weight: 600px">扫一扫添加微信</div>
+                        <div style="margin-left: 20px; font-weight: 600">扫一扫添加微信</div>
                         </li>
                         <li id="dianhua" style="display: none; font-size: 15px; height: 200px;">
                         <img style="width: 149px; height: 150px" alt="" src="img/clients/SJ.png">
-                        <div style="margin-left: 10px; font-weight: 600px">扫一扫添加手机号码</div>
+                        <div style="margin-left: 10px; font-weight: 600">扫一扫添加手机号码</div>
                         </li>
                     </span>
                 </div>
@@ -333,7 +333,7 @@
     <script LANGUAGE="javascript"> 
     <!-- 
         function openwin() { 
-            window.open ('signout.html', 'newwindow', 'height=400, width=500, top=200, left=400, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no')
+            window.open ('logout.html', 'newwindow', 'height=400, width=500, top=200, left=400, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no')
         } 
     //--> 
     </script> 

@@ -57,16 +57,16 @@
                         </div>
                     </li>
                     <li>
-                        <a class="active-menu" href="home.html"><i class="fa fa-dashboard "></i>主面板</a>
+                        <a class="active-menu" href="admin_home.php"><i class="fa fa-dashboard "></i>主面板</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-desktop "></i>新闻与通知<span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
-                                <a href="panel-tabs.html"><i class="fa fa-bell"></i>新闻中心</a>
+                                <a href="news_list.php"><i class="fa fa-bell"></i>新闻中心</a>
                             </li>
                             <li>
-                                <a href="notification.html"><i class="fa fa-bell "></i>通知中心</a>
+                                <a href="notice_list.php"><i class="fa fa-bell "></i>通知中心</a>
                             </li>                                                     
                         </ul>
                     </li>
@@ -74,10 +74,10 @@
                         <a href="#"><i class="fa fa-bar-chart-o"></i>问卷管理<span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
-                                <a href="invoice.html"><i class="fa fa-file-excel-o"></i>新建问卷模板</a>
+                                <a href="new_create_questionnaire_template.php"><i class="fa fa-file-excel-o"></i>新建问卷模板</a>
                             </li>
                             <li>
-                                <a href="pricing.html"><i class="fa fa-file-excel-o"></i>问卷模板列表</a>
+                                <a href="questionnaire_template.php"><i class="fa fa-file-excel-o"></i>问卷模板列表</a>
                             </li>                                                     
                         </ul>
                     </li>
@@ -85,10 +85,10 @@
                         <a href="#"><i class="fa fa-file-sound-o"></i>问卷邀请管理<span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
-                                <a href="invoice.html"><i class="fa fa-file-text"></i>登记问卷邀请</a>
+                                <a href="register_questionnaire_invite.php"><i class="fa fa-file-text"></i>登记问卷邀请</a>
                             </li>
                             <li>
-                                <a href="pricing.html"><i class="fa fa-file-text"></i>问卷邀请列表</a>
+                                <a href="questionnaire_invite.php"><i class="fa fa-file-text"></i>问卷邀请列表</a>
                             </li>                          
                         </ul>
                     </li>
@@ -96,10 +96,10 @@
                         <a href="#"><i class="fa fa-group"></i>用户管理<span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">                           
                              <li>
-                                <a href="form.html"><i class="fa fa-user"></i>创建用户</a>
+                                <a href="create_user.php"><i class="fa fa-user"></i>创建用户</a>
                             </li>
                              <li>
-                                <a href="form-advance.html"><i class="fa fa-user"></i>用户列表</a>
+                                <a href="user_list.php"><i class="fa fa-user"></i>用户列表</a>
                             </li>                          
                         </ul>
                     </li>                    
@@ -107,16 +107,16 @@
                         <a href="#"><i class="fa fa-unlock-alt"></i>权限管理 <span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
-                                <a href="#"><i class="fa fa-key"></i>接口列表</a>
+                                <a href="port_list.php"><i class="fa fa-key"></i>接口列表</a>
                             </li>
                              <li>
-                                <a href="#"><i class="fa fa-key"></i>新建接口</a>
+                                <a href="new_create_port.php"><i class="fa fa-key"></i>新建接口</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-key"></i>角色列表</a>
+                                <a href="role_list.php"><i class="fa fa-key"></i>角色列表</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-key"></i>新建角色</a>
+                                <a href="new_create_role.php"><i class="fa fa-key"></i>新建角色</a>
                             </li>
                         </ul>
                     </li>
@@ -124,7 +124,7 @@
                         <a href="#"><i class="fa fa-gears"></i>系统控制面板<span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
-                                <a href="#"><i class="fa fa-gear"></i>系统参数</a>
+                                <a href="system_parameter.php"><i class="fa fa-gear"></i>系统参数</a>
                             </li>
                         </ul>
                     </li>                  
@@ -141,7 +141,7 @@
                     </div>
                 </div> <!-- row -->
                 <div class="content body">
-                <a class="btn btn-primary btn-flat" id="check_template">查看模板列表</a>
+                <a href="questionnaire_template.php" class="btn btn-primary btn-flat" id="check_template">查看模板列表</a>
                 <div class="box box-primary">
                     <div class="box-header with-border">
                         <h3 class="box-title">填写模板信息</h3>
@@ -158,11 +158,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="beginTime">生效时间</label>
-                                <input class="form-control form_datetime" id="beginTime" placeholder="问卷生效时间" readonly="" type="text">
+                                <input class="form-control" id="beginTime" placeholder="问卷生效时间" type="text">
                             </div>
                             <div class="form-group">
                                 <label for="endTime">失效时间</label>
-                                <input class="form-control form_datetime" id="endTime" placeholder="问卷失效时间" readonly="" type="text">
+                                <input class="form-control" id="endTime" placeholder="问卷失效时间" type="text">
                             </div>
                             <div class="form-group">
                                 <label for="pageUrl">pageUrl</label>
