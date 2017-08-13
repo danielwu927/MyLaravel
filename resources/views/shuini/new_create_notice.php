@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -163,11 +163,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="beginTime">生效时间</label>
-                                <input class="form-control" id="url" placeholder="请输入生效时间" type="text">
+                                <input class="form-control" id="beginTime" placeholder="请输入生效时间" type="text">
                             </div>
                             <div class="form-group">
                                 <label for="endTime">失效时间</label>
-                                <input class="form-control" id="url" placeholder="请输入失效时间" type="text">
+                                <input class="form-control" id="endTime" placeholder="请输入失效时间" type="text">
                             </div>
                         </div>
                         <div class="box-footer" align="right">
