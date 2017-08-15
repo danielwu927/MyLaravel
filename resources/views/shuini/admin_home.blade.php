@@ -36,29 +36,46 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="/img/admin.jpg" class="user-image" alt="User Image">
 
+                            {{Auth::user()->username}}
+
                             <div class="inner-text" style="font-size:28px">
                                 <span style="color:#F00">admin</span>
+
+
                             <br />
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
                             <ul class="dropdown-menu">
                         
                             <!-- Menu Footer-->
                             <li class="user-footer">
-                                <div class="pull-left">
-                                    <a href="javascript:void(0);" class="btn btn-default btn-flat" id="btnUserInfo">用户信息</a>
-                                </div>
                                 <div class="pull-right">
-                                    <a href="javascript:void(0);" class="btn btn-default btn-flat" id="btnSignOut">注销</a>
+                                    <a href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        注销
+                                    </a>
+
                                 </div>
                             </li>
                             </ul>
-                                  <?php  Auth::user()->username ?>
-
 
                             </div>
-                        </div>
+                       </div>
                     </li>
                     <li>
-                        <a class="active-menu" href="admin_home.php"><i class="fa fa-dashboard "></i>主面板</a>
+                        <a class="active-menu" href="home"><i class="fa fa-dashboard "></i>主面板</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-desktop "></i>新闻与通知<span class="fa arrow"></span></a>

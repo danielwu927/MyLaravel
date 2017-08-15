@@ -8,8 +8,9 @@
                 <div class="panel-heading">Welcome，{{Auth::user()->username}}</div>
 
                 <div class="panel-body">
-                    欢迎登录！
+                    登录成功！3秒后自动进入页面...
                 </div>
+                <meta http-equiv="refresh" content="3;url=hello.php">
 
             </div>
         </div>

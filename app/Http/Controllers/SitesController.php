@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\User;
+use Illuminate\Support\Facades\Auth;
+use Zizaco\Entrust\Entrust;
+use Zizaco\Entrust\Traits\EntrustUserTrait;
 //sitescontroller
 
 class SitesController extends Controller
@@ -11,11 +14,6 @@ class SitesController extends Controller
         return view('shuini.index');
     }
 
-
-    public function surveyPage(){
-
-        return view('sites.surveys');
-    }
 
     public function getLogin(){
 
@@ -29,10 +27,30 @@ class SitesController extends Controller
     public function getRegister(){
         return view('auth.register');
     }
+    public function hello(){
+        $user=Auth::user();
+        switch ($user->role) {
+          case 2:return view('hello');
+          case 3:return view('researcher');
+          case 4:return view('expert');
+          case 5:return redirect('admin/home');
+          default: return redirect('/');
 
 
-    public function showAdminHome(){
-        return view('shuini.admin_home');
+      }
+
+
+    }
+
+    public function showAdminHome()
+    {
+
+            $user=Auth::user();
+
+        if ($user->hasRole('admin')) {
+            return view('shuini.admin_home');
+        }else
+            return redirect('/');
     }
 
 

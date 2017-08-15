@@ -58,7 +58,7 @@
                         </div>
                     </li>
                     <li>
-                        <a class="active-menu" href="home.html"><i class="fa fa-dashboard "></i>主面板</a>
+                        <a class="active-menu" href="admin_home.blade.php"><i class="fa fa-dashboard "></i>主面板</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-desktop "></i>新闻与通知<span class="fa arrow"></span></a>
