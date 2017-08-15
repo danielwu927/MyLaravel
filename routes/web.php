@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', 'SitesController@index')->name('homePage');      //根目录显示网站首页
 
 Route::get('shuini', 'SitesController@index')->name('homePage');
