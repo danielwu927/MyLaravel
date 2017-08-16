@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>后台管理操作</title>
     <!-- BOOTSTRAP 引导 STYLES-->
-    <link href="css/bootstrap01.css" rel="stylesheet" />
+    <link href="/css/bootstrap01.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
-    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="/css/font-awesome.css" rel="stylesheet" />
        <!--CUSTOM BASIC 样式 STYLES-->
-    <link href="css/basic.css" rel="stylesheet" />
+    <link href="/css/basic.css" rel="stylesheet" />
     <!--CUSTOM MAIN 风格 STYLES-->
-    <link href="css/custom.css" rel="stylesheet" />
+    <link href="/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE 谷歌字体 FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
@@ -24,7 +24,7 @@
             </div>
 
             <div class="header-right">
-                <img src="img/logo-whut.png" width="400" height="50"/></a>
+                <img src="/img/logo-whut.png" width="400" height="50"/></a>
             </div>
         </nav>
         <!-- navbar -->
@@ -35,7 +35,7 @@
                         <div class="user-img-div">
                             
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="img/admin.jpg" class="user-image" alt="User Image">
+                        <img src="/img/admin.jpg" class="user-image" alt="User Image">
 
                             <div class="inner-text" style="font-size:28px">
                                 <span style="color:#F00">admin</span>
@@ -100,7 +100,7 @@
                                 <a href="create_user.php"><i class="fa fa-user"></i>创建用户</a>
                              </li>
                              <li>
-                                <a href="user_list.php"><i class="fa fa-user"></i>用户列表</a>
+                                <a href="/admin/user_list"><i class="fa fa-user"></i>用户列表</a>
                             </li>                          
                         </ul>
                     </li>                    
@@ -160,6 +160,12 @@
                                 </div>
                             </div>
                         </div>
+
+
+
+
+
+
                         <div class="row">
                             <div class="col-sm-12">
                                 <table id="usersTable" class="table table-hover table-responsive dataTable no-footer" role="grid" aria-describedby="usersTable_info" style="width: 1015px;">
@@ -174,17 +180,23 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($users as $user)
                                 <tr role="row" class="odd">
-                                    <td>admin</td>
-                                    <td>拥有最大权限</td>
+                                    <td>{{$user->username}}</td>
+                                    <td>{{$user->user_role()}}</td>
                                     <td>-1</td>
-                                    <td>11111@qq.com</td>
-                                    <td>已激活</td>
-                                    <td><button class="btn btn-danger btn-xs btn-freeze btn-flat" data-id="admin">冻结</button> 
+                                    <td>{{$user->email}}</td>
+                                    <td>{{$user->status==1?'已激活':'冻结'}}</td>
+                                    <td><button class="btn btn-active btn-xs btn-delete btn-flat" data-id="admin">冻结</button>
                                     <button class="btn btn-primary btn-xs btn-modify btn-flat" data-id="admin">修改</button>                                       
-                                    <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="admin">删除</button></td>
+                                    <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="admin"  onclick="del_user({{$user->id}})">删除</button></td>
                                 </tr>
-                                <tr role="row" class="even">
+                                @endforeach
+                                <div class="col-sm-7" align="right"> {!! $users->links() !!}
+                                </div>
+
+                                <!--
+                                       <tr role="row" class="even">
                                     <td>ktzcy</td><td>课题组成员</td>
                                     <td>-1</td><td>1718@qq.com</td>
                                     <td>已激活</td>
@@ -221,46 +233,7 @@
                                     <button class="btn btn-primary btn-xs btn-modify btn-flat" data-id="wang">修改</button>                                       
                                     <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="wang">删除</button></td>
                                 </tr>
-                                <tr role="row" class="even">
-                                    <td>zhang</td>
-                                    <td>水泥厂用户1</td>
-                                    <td>-1</td>
-                                    <td>178791827@qq.com</td>
-                                    <td>已激活</td>
-                                    <td><button class="btn btn-danger btn-xs btn-freeze btn-flat" data-id="zhang">冻结</button> 
-                                    <button class="btn btn-primary btn-xs btn-modify btn-flat" data-id="zhang">修改</button>                                       
-                                    <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="zhang">删除</button></td>
-                                </tr>
-                                <tr role="row" class="odd">
-                                    <td>zhao</td>
-                                    <td>项目组负责人2</td>
-                                    <td>-1</td>
-                                    <td>11@163.com</td>
-                                    <td>已激活</td>
-                                    <td><button class="btn btn-danger btn-xs btn-freeze btn-flat" data-id="zhao">冻结</button> 
-                                    <button class="btn btn-primary btn-xs btn-modify btn-flat" data-id="zhao">修改</button>                                       
-                                    <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="zhao">删除</button></td>
-                                </tr>
-                                    <tr role="row" class="even">
-                                    <td>zhouran</td>
-                                    <td>课题组负责人8</td>
-                                    <td>-1</td>
-                                    <td>178791827@qq.com</td>
-                                    <td>已激活</td>
-                                    <td><button class="btn btn-danger btn-xs btn-freeze btn-flat" data-id="zhouran">冻结</button> 
-                                    <button class="btn btn-primary btn-xs btn-modify btn-flat" data-id="zhouran">修改</button>                                       
-                                    <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="zhouran">删除</button></td>
-                                </tr>
-                                <tr role="row" class="odd">
-                                    <td>zhuanjia</td>
-                                    <td>专家</td>
-                                    <td>-1</td>
-                                    <td>121212@qq.com</td>
-                                    <td>已激活</td>
-                                    <td><button class="btn btn-danger btn-xs btn-freeze btn-flat" data-id="zhuanjia">冻结</button> 
-                                    <button class="btn btn-primary btn-xs btn-modify btn-flat" data-id="zhuanjia">修改</button>                                       
-                                    <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="zhuanjia">删除</button></td>
-                                </tr>
+-->
                                 </tbody>
                                 </table>
                             </div>
@@ -289,14 +262,22 @@
    
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY 脚本 SCRIPTS -->
-    <script src="js/jquery-1.10.2.js"></script>
+    <script src="/js/jquery-1.10.2.js"></script>
     <!-- BOOTSTRAP SCRIPTS -->
-    <script src="js/bootstrap.js"></script>
+    <script src="/js/bootstrap.js"></script>
     <!-- METISMENU SCRIPTS -->
-    <script src="js/jquery.metisMenu.js"></script>
+    <script src="/js/jquery.metisMenu.js"></script>
        <!-- CUSTOM SCRIPTS -->
-    <script src="js/custom01.js"></script>
-    
+    <script src="/js/custom01.js"></script>
+    <script>
+
+        function  del_user(id) {
+            if (confirm('您确定要删除这个用户吗？'))
+                window.location="/admin/del_user/"+id  ;
+
+
+        }
+    </script>
 
 </body>
 </html>

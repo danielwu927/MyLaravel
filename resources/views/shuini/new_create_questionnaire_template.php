@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>后台管理操作</title>
     <!-- BOOTSTRAP 引导 STYLES-->
-    <link href="css/bootstrap01.css" rel="stylesheet" />
+    <link href="/css/bootstrap01.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
-    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="/css/font-awesome.css" rel="stylesheet" />
        <!--CUSTOM BASIC 样式 STYLES-->
-    <link href="css/basic.css" rel="stylesheet" />
+    <link href="/css/basic.css" rel="stylesheet" />
     <!--CUSTOM MAIN 风格 STYLES-->
-    <link href="css/custom.css" rel="stylesheet" />
+    <link href="/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE 谷歌字体 FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
@@ -23,7 +23,7 @@
             </div>
 
             <div class="header-right">
-                <img src="img/logo-whut.png" width="400" height="50"/></a>
+                <img src="/img/logo-whut.png" width="400" height="50"/></a>
             </div>
         </nav>
         <!-- navbar -->
@@ -34,7 +34,7 @@
                         <div class="user-img-div">
                             
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="img/admin.jpg" class="user-image" alt="User Image">
+                        <img src="/img/admin.jpg" class="user-image" alt="User Image">
 
                             <div class="inner-text" style="font-size:28px">
                                 <span style="color:#F00">admin</span>
@@ -99,7 +99,7 @@
                                 <a href="create_user.php"><i class="fa fa-user"></i>创建用户</a>
                             </li>
                              <li>
-                                <a href="user_list.php"><i class="fa fa-user"></i>用户列表</a>
+                                <a href="user_list.blade.php"><i class="fa fa-user"></i>用户列表</a>
                             </li>                          
                         </ul>
                     </li>                    
@@ -185,13 +185,13 @@
    
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY 脚本 SCRIPTS -->
-    <script src="js/jquery-1.10.2.js"></script>
+    <script src="/js/jquery-1.10.2.js"></script>
     <!-- BOOTSTRAP SCRIPTS -->
-    <script src="js/bootstrap.js"></script>
+    <script src="/js/bootstrap.js"></script>
     <!-- METISMENU SCRIPTS -->
-    <script src="js/jquery.metisMenu.js"></script>
+    <script src="/js/jquery.metisMenu.js"></script>
        <!-- CUSTOM SCRIPTS -->
-    <script src="js/custom01.js"></script>
+    <script src="/js/custom01.js"></script>
     
 
 </body>

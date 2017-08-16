@@ -72,7 +72,7 @@ body {
 }
 
 .header-right {
-    color: #fff;
+    color: #00f;
     padding: 15px 50px 5px 50px;
     float: right;
     font-size: 16px;
@@ -178,7 +178,7 @@ body {
 }
 
 .navbar-cls-top {
-    background: #00CA79;
+    background: #4380B8;
     border-bottom: none;
 }
 
@@ -192,7 +192,7 @@ body {
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background-color: #00CA79;
+    background-color: #4380B8;
 }
 
 .navbar-default .navbar-toggle {

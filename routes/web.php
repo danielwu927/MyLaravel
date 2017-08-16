@@ -16,17 +16,82 @@ Route::get('/', 'SitesController@index')->name('homePage');      //根目录显�
 
 Route::get('shuini', 'SitesController@index')->name('homePage');
 
-Route::get('admin/home','SitesController@showAdminHome')->name('showAdminHome');
+Route::get('admin/home','SitesController@showAdminHome')->middleware('auth');
 
-Route::group(['middleware'=>'auth'],function (){                  //定义路由组
-    Route::get('auth/register','SitesController@getRegister')->name('showRegister');   //显示注册页面
-
-    Route::get('auth/login','SitesController@getLogin')->name('showLogin');      //显示登录界面
-});
-Route::get('/user_page','SitesController@userPage');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::group(['prefix'=>'admin'],function (){
+    Route::get('news_list.php',function()
+    {
+        return view('shuini.news_list');
+    }
+    );
+    Route::get('notice_list.php',function (){
+        return view('shuini.notice_list');
+    }
+    );
+    Route::get('new_create_questionnaire_template.php',function (){
+        return view('shuini.new_create_questionnaire_template');
+    }
+    );
+    Route::get('questionnaire_template.php',function (){
+        return view('shuini.questionnaire_template');
+    }
+    );
+    Route::get('register_questionnaire_invite.php',function (){
+        return view('shuini.register_questionnaire_invite');
+    }
+    );
+    Route::get('questionnaire_invite.php',function (){
+        return view('shuini.questionnaire_invite');
+    }
+    );
+    Route::get('create_user.php',function (){
+        return view('shuini.create_user');
+    }
+    );
+
+    //controller里获取数据 $users
+    Route::get('user_list','DaLao@index'
+    );
+    Route::get('user_list.blade.php','DaLao@index');
+
+    Route::get('port_list.php',function (){
+        return view('shuini.port_list');
+    }
+    );
+    Route::get('new_create_port.php',function (){
+        return view('shuini.new_create_port');
+    }
+    );
+    Route::get('role_list.php',function (){
+        return view('shuini.role_list');
+    }
+    );
+    Route::get('new_create_port.php',function (){
+        return view('shuini.new_create_port');
+    }
+    );
+    Route::get('new_create_role.php',function (){
+        return view('shuini.new_create_role');
+    }
+    );
+    Route::get('system_parameter.php',function (){
+        return view('shuini.system_parameter');
+    }
+    );
+
+    //删除用户
+    Route::get('/del_user/{id}','DaLao@del_user');//对相应的权限没有过滤
 
 
+});
+
+//测试用的路由----------start---------------
+Route::get("/test",function (){return view('test');});
+
+Route::any("/query",'DaLao@multiConditionQuery');
+
+//测试用的路由----------end---------------

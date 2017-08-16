@@ -11,7 +11,7 @@
         rel='stylesheet' type='text/css'>
     <link type="text/css" href="icons/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link type="text/css" href="icons/rondo/style.css" rel="stylesheet">
-    <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+    <link href="/css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
     <link type="text/css" href="css/owl.carousel.css" rel="stylesheet">
     <link type="text/css" href="css/owl.transitions.css" rel="stylesheet">
     <link type="text/css" href="css/style.css" rel="stylesheet">
@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="navbar-header"><!--右侧标签-->
                     <a class="navbar-brand" href="#">
-                        <img src="img/logo-whut.png" width="400" height="60"/></a>
+                        <img src="/img/logo-whut.png" width="400" height="60"/></a>
                 </div>
                 <nav class="nav fl">
                     <ul style="margin-left: 100px; float: left; line-height: 90px; font-size:20px">
@@ -30,8 +30,8 @@
                         <a href="#about" style="padding-right:20px;">关于我们</a>
                         <a href="#hero" style="padding-right:20px;">最新资讯</a>
                         <a href="#survey" style="padding-right:20px;">用户手册</a>
-                        <a href="../auth/login" style="padding-right:20px;" target="_blank">账户登录</a>
-                        <a href="admin/home" style="padding-right:20px;" target="_blank">后台管理</a>
+                        <a href="login" style="padding-right:20px;" target="_blank">账户登录</a>
+                            <a href="admin/home" style="padding-right:20px;" target="_blank">后台管理</a>
                     </ul>
                 </nav>              
             </div><!-- /.container -->
@@ -355,9 +355,9 @@
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="js/jquery.smooth-scroll.min.js"></script>
     <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-    <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
-    <script src="js/modernizr.js" type="text/javascript"></script>
-    <script src="js/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="/js/jquery.easing.1.3.js" type="text/javascript"></script>
+    <script src="/js/modernizr.js" type="text/javascript"></script>
+    <script src="/js/jquery.fancybox.pack.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/custom.js"></script>
 </body>
 </html>
