@@ -83,9 +83,9 @@
                                     <label></label>
                                     <select name="role" id="role" >
                                         <option value="1">游客</option>
-                                        <option value="2">课题组成员</option>
-                                        <option value="3">专家组成员</option>
-                                        <option value="4">水泥厂用户</option>
+                                        <option value="2">水泥厂用户</option>
+                                        <option value="3">课题组成员</option>
+                                        <option value="4">专家组成员</option>
                                     </select>
 
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>后台管理操作</title>
+    <title>问卷调查系统</title>
     <!-- BOOTSTRAP 引导 STYLES-->
     <link href="/css/bootstrap01.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
@@ -19,118 +19,34 @@
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">后台管理</a>
+                <a class="navbar-brand" href="#">问卷调查系统</a>
             </div>
 
             <div class="header-right">
                 <img src="/img/logo-whut.png" width="400" height="50"/></a>
             </div>
-        </nav>
-        <!-- navbar -->
-        <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-                    <li>
-                        <div class="user-img-div">
-                            
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="/img/admin.jpg" class="user-image" alt="User Image">
+            <!-- logout -->
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                        Logout
+                    </a>
 
-                            <div class="inner-text" style="font-size:28px">
-                                <span style="color:#F00">admin</span>
-                            <br />
-                            <ul class="dropdown-menu">
-                        
-                            <!-- Menu Footer-->
-                            <li class="user-footer">
-                                <div class="pull-left">
-                                    <a href="javascript:void(0);" class="btn btn-default btn-flat" id="btnUserInfo">用户信息</a>
-                                </div>
-                                <div class="pull-right">
-                                    <a href="javascript:void(0);" class="btn btn-default btn-flat" id="btnSignOut">注销</a>
-                                </div>
-                            </li>
-                            </ul>
-               
-                            <small style="font-size:17px">SUPER </small>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="active-menu" href="admin_home.blade.php"><i class="fa fa-dashboard "></i>主面板</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-desktop "></i>新闻与通知<span class="fa arrow"></span></a>
-                         <ul class="nav nav-second-level">
-                            <li>
-                                <a href="news_list.php"><i class="fa fa-bell"></i>新闻中心</a>
-                            </li>
-                            <li>
-                                <a href="notice_list.php"><i class="fa fa-bell "></i>通知中心</a>
-                            </li>                                                     
-                        </ul>
-                    </li>
-                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o"></i>问卷管理<span class="fa arrow"></span></a>
-                         <ul class="nav nav-second-level">
-                            <li>
-                                <a href="new_create_questionnaire_template.php"><i class="fa fa-file-excel-o"></i>新建问卷模板</a>
-                            </li>
-                            <li>
-                                <a href="questionnaire_template.php"><i class="fa fa-file-excel-o"></i>问卷模板列表</a>
-                            </li>                                                     
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-file-sound-o"></i>问卷邀请管理<span class="fa arrow"></span></a>
-                         <ul class="nav nav-second-level">
-                            <li>
-                                <a href="register_questionnaire_invite.php"><i class="fa fa-file-text"></i>登记问卷邀请</a>
-                            </li>
-                            <li>
-                                <a href="questionnaire_invite.php"><i class="fa fa-file-text"></i>问卷邀请列表</a>
-                            </li>                          
-                        </ul>
-                    </li>
-                     <li>
-                        <a href="#"><i class="fa fa-group"></i>用户管理<span class="fa arrow"></span></a>
-                         <ul class="nav nav-second-level">                           
-                             <li>
-                                <a href="create_user.php"><i class="fa fa-user"></i>创建用户</a>
-                            </li>
-                             <li>
-                                <a href="user_list.blade.php"><i class="fa fa-user"></i>用户列表</a>
-                            </li>                          
-                        </ul>
-                    </li>                    
-                    <li>
-                        <a href="#"><i class="fa fa-unlock-alt"></i>权限管理 <span class="fa arrow"></span></a>
-                         <ul class="nav nav-second-level">
-                            <li>
-                                <a href="port_list.php"><i class="fa fa-key"></i>接口列表</a>
-                            </li>
-                             <li>
-                                <a href="new_create_port.php"><i class="fa fa-key"></i>新建接口</a>
-                            </li>
-                            <li>
-                                <a href="role_list.php"><i class="fa fa-key"></i>角色列表</a>
-                            </li>
-                            <li>
-                                <a href="new_create_role.php"><i class="fa fa-key"></i>新建角色</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-gears"></i>系统控制面板<span class="fa arrow"></span></a>
-                         <ul class="nav nav-second-level">
-                            <li>
-                                <a href="system_parameter.php"><i class="fa fa-gear"></i>系统参数</a>
-                            </li>
-                        </ul>
-                    </li>                  
-                </ul>
-            </div>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                </li>
+            </ul>
         </nav>
+
+        <button action="{{ route('logout') }}" method="post"></button>>
+        <!-- navbar -->
+
+
+
+
         <!-- navbar-default  -->
         <div id="page-wrapper">
             <div id="page-inner">
