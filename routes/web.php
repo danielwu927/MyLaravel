@@ -21,16 +21,19 @@ Route::get('admin/home','SitesController@showAdminHome')->middleware('auth');
 
 Route::get('logout','SitesController@index');
 
-Auth::routes();
+Auth::routes();                        //注册登录认证路由组
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['prefix'=>'admin'],function (){
+Route::group(['prefix'=>'admin'],function (){         //后台管理路由组
     Route::get('admin_home.blade.php',function (){
         return view ('shuini.admin_home');
     });
     Route::get('new_create_news.php',function (){
         return view('shuini.new_create_news');
+    });
+    Route::get('new_create_notice.php',function (){
+        return view('shuini.new_create_notice');
     });
 
     Route::get('news_list.php',function()
@@ -42,6 +45,8 @@ Route::group(['prefix'=>'admin'],function (){
         return view('shuini.notice_list');
     }
     );
+    Route::post('create_notice.php','ArticleController@create');
+
     Route::get('new_create_questionnaire_template.php',function (){
         return view('shuini.new_create_questionnaire_template');
     }
