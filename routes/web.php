@@ -98,11 +98,20 @@ Route::group(['prefix'=>'admin'],function (){
     Route::get('/del_user/{id}','DaLao@del_user');//对相应的权限没有过滤
 
 
+
+    Route::get('/mod_user/{id}','DaLao@mod_user');
+
+    //更新用户信息
+
+   Route::post('/update_user/{id}','DaLao@update_user');
+
 });
 
 //测试用的路由----------start---------------
-Route::get("/test",function (){return view('test');});
+Route::get("/test", function (){return view( 'test');});
 
 Route::any("/query",'DaLao@multiConditionQuery');
+
+Route::any("cre_user",'DaLao@cre_user');
 
 //测试用的路由----------end---------------

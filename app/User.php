@@ -48,7 +48,5 @@ class User extends Authenticatable
 
     }
 
-    public static function  returnQuery(){
-      return  DB::table('users');
-    }
+
 }
