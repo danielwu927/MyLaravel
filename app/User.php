@@ -17,6 +17,7 @@ class User extends Authenticatable
 
     use Notifiable;
     use EntrustUserTrait;
+    protected $primaryKey='id';
     protected $fillable = [
         'username', 'email', 'password','role','description'
     ];
