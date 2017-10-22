@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', 'SitesController@index')->name('homePage');      //根目录显示网站首页
 
 Route::get('shuini', 'SitesController@index')->name('homePage');
@@ -67,10 +68,12 @@ Route::group(['prefix'=>'admin'],function (){         //后台管理路由组
         return view('shuini.create_user');
     }
     );
-    Route::get('user_list.php',function (){
-        return view('shuini.user_list');
-    }
+
+    //controller里获取数据 $users
+    Route::get('user_list','DaLao@index'
     );
+    Route::get('user_list.blade.php','DaLao@index');
+
     Route::get('port_list.php',function (){
         return view('shuini.port_list');
     }
@@ -96,5 +99,24 @@ Route::group(['prefix'=>'admin'],function (){         //后台管理路由组
     }
     );
 
+    //删除用户
+    Route::get('/del_user/{id}','DaLao@del_user');//对相应的权限没有过滤
+
+
+
+    Route::get('/mod_user/{id}','DaLao@mod_user');
+
+    //更新用户信息
+
+   Route::post('/update_user/{id}','DaLao@update_user');
+
 });
 
+//测试用的路由----------start---------------
+Route::get("/test", function (){return view( 'test');});
+
+Route::any("/query",'DaLao@multiConditionQuery');
+
+Route::any("cre_user",'DaLao@cre_user');
+
+//测试用的路由----------end---------------

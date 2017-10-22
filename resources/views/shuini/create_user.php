@@ -100,7 +100,7 @@
                                 <a href="create_user.php"><i class="fa fa-user"></i>创建用户</a>
                             </li>
                              <li>
-                                <a href="user_list.php"><i class="fa fa-user"></i>用户列表</a>
+                                <a href="user_list.blade.php"><i class="fa fa-user"></i>用户列表</a>
                             </li>                          
                         </ul>
                     </li>                    
@@ -143,65 +143,82 @@
                 </div> <!-- row -->
                
                 <div class="content body">
-                    <a href="user_list.php" class="btn btn-primary btn-flat" id="check_user_list">查看用户列表</a>
+                    <a href="user_list.blade.php" class="btn btn-primary btn-flat" id="check_user_list">查看用户列表</a>
                     <div class="box box-primary">
                         <div class="box-header with-border">
                             <h3 class="box-title">填写用户信息</h3>
                         </div>
-                        <form role="form">
+                        <form role="form" id="create_user" method="post" action="/cre_user" onsubmit="return  checkUser()">
+
                             <div class="box-body">
+
+<!--                                <input type="hidden" name="_token" value=/>-->
                                 <div class="form-group">
+                                    <input type="hidden" name="_token" value="<?php  echo csrf_token(); ?>" />
                                     <label for="accountId">用户名</label>
-                                    <input class="form-control" id="accountId" placeholder="请输入用户名" type="text">
+                                    <input class="form-control" name="username" id="username" placeholder="请输入用户名" type="text">
                                 </div>
                                 <div class="form-group">
                                     <label for="password">密码</label>
-                                    <input class="form-control" id="password" placeholder="请输入初始密码" type="text">
+                                    <input class="form-control" name="password" id="password" placeholder="请输入初始密码" type="text">
                                 </div>
                                 <div class="form-group">
                                     <label for="description">描述</label>
-                                    <input class="form-control" id="description" placeholder="请输入相关描述信息" type="text">
+                                    <input class="form-control" name="description" id="description" placeholder="请输入相关描述信息" type="text">
                                 </div>
                                 <div class="form-group">
                                     <label for="email">邮箱</label>
-                                    <input class="form-control" id="email" placeholder="请输入邮箱" type="text">
+                                    <input class="form-control" name="email" id="email" placeholder="请输入邮箱" type="text">
                                 </div>
                                 <div class="form-group">
                                     <label for="status">选择用户状态</label>
-                                    <select class="form-control" id="status">
+                                    <select class="form-control" id="status" name="status">
                                         <option value="1">激活</option>
-                                        <option value="2">冻结</option>
+                                        <option value="0">冻结</option>
                                     </select>
                                 </div>
-                                <div class="form-group">
-                                    <label for="factoryId">选择用户所在水泥厂</label>
-                                    <select class="form-control" id="factoryId">
-                                        <option value="-1">测试用水泥厂</option>
-                                        <option value="1">1</option>
-                                    </select>
-                                </div>
+<!--                                <div class="form-group">-->
+<!--                                    <label for="factoryId">选择用户所在水泥厂</label>-->
+<!--                                    <select class="form-control" id="factoryId">-->
+<!--                                        <option value="-1">测试用水泥厂</option>-->
+<!--                                        <option value="1">1</option>-->
+<!--                                    </select>-->
+<!--                                </div>-->
                                 <div class="form-group">
                                     <label for="roleList">用户角色</label>
                                     <div id="roleList">
                                         <table class="table table-responsive">
                                         <tbody>
-                                            <tr>
-                                                <td><input value="19" name="role" type="checkbox">管理员</td>
-                                                <td><input value="20" name="role" type="checkbox">项目组负责人</td>
-                                                <td><input value="22" name="role" type="checkbox">水泥厂用户</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input value="23" name="role" type="checkbox">课题组负责人</td>
-                                                <td><input value="24" name="role" type="checkbox">专家组</td>
-                                                <td><input value="25" name="role" type="checkbox">课题组成员</td>
-                                            </tr>
+<!--                                            <tr>-->
+<!--                                                <td><input value="19" name="role" type="checkbox">管理员</td>-->
+<!--                                                <td><input value="20" name="role" type="checkbox">项目组负责人</td>-->
+<!--                                                <td><input value="22" name="role" type="checkbox">水泥厂用户</td>-->
+<!--                                            </tr>-->
+<!--                                            <tr>-->
+<!--                                                <td><input value="23" name="role" type="checkbox">课题组负责人</td>-->
+<!--                                                <td><input value="24" name="role" type="checkbox">专家组</td>-->
+<!--                                                <td><input value="25" name="role" type="checkbox">课题组成员</td>-->
+<!--                                            </tr>-->
+
+                                     <tr>
+                                         <td><input value="5" name="role" type="checkbox">管理员</td>
+                                         <td><input value="4" name="role" type="checkbox">专家组成员</td >
+                                         <td><input value="3" name="role" type="checkbox">课题组成员</td>
+                                     </tr>
+                                        <tr>
+                                            <td><input value="2" name="role" type="checkbox">水泥厂用户</td>
+                                            <td><input value="1" name="role" type="checkbox">游客</td>
+
+
+                                        </tr>
+
                                         </tbody>
                                         </table>
                                     </div>
                                 </div>
                             </div>
                             <div class="box-footer" align="right">
-                                <input class="btn btn-primary btn-flat" id="submit" value="创建用户" type="button">
+                                <input class="btn btn-primary btn-flat" id="submit" value="创建用户" type="submit" >
                             </div>
                         </form>
                     </div>
@@ -221,7 +238,22 @@
        <!-- CUSTOM SCRIPTS -->
     <script src="/js/custom01.js"></script>
     
+<SCRIPT>
+    function checkUser(){
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
 
+        if(username == ""  ){
+            alert("用户名不能为空");
+            return false;
+        }
+        if(password == ""  ){
+            alert("密码不能为空");
+            return false;
+        }
+    //    document.getElementById("create_user").submit();
+    }
+</SCRIPT>
 
 </body>
 </html>

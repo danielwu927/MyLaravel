@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html>
 
 <head>
     <meta charset="utf-8" />
@@ -117,7 +117,7 @@
                                 <a href="create_user.php"><i class="fa fa-user"></i>创建用户</a>
                             </li>
                              <li>
-                                <a href="user_list.php"><i class="fa fa-user"></i>用户列表</a>
+                                <a href="/admin/user_list"><i class="fa fa-user"></i>用户列表</a>
                             </li>                          
                         </ul>
                     </li>                    
@@ -164,7 +164,7 @@
                         <div class="main-box mb-dull">
                             <a href="#">
                                 <i class="fa fa-group fa-5x"></i>
-                                <a href="user_list.php"><h5>用户管理</h5></a>
+                                <a href="user_list.blade.php"><h5>用户管理</h5></a>
                             </a>
                         </div>
                     </div>
@@ -229,13 +229,15 @@
    
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY 脚本 SCRIPTS -->
-    <script src="/js/jquery-1.10.2.js"></script>
+
+    <script src="../js/jquery-1.10.2.js"></script>
     <!-- BOOTSTRAP SCRIPTS -->
-    <script src="/js/bootstrap.js"></script>
+    <script src="../js/bootstrap.js"></script>
     <!-- METISMENU SCRIPTS -->
-    <script src="/js/jquery.metisMenu.js"></script>
+    <script src="../js/jquery.metisMenu.js"></script>
        <!-- CUSTOM SCRIPTS -->
-    <script src="/js/custom01.js"></script>
+    <script src="../js/custom01.js"></script>
+
     
 
 

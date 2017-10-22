@@ -96,7 +96,7 @@
                             <a href="create_user.php"><i class="fa fa-user"></i>创建用户</a>
                         </li>
                         <li>
-                            <a href="user_list.php"><i class="fa fa-user"></i>用户列表</a>
+                            <a href="user_list.blade.php"><i class="fa fa-user"></i>用户列表</a>
                         </li>
                     </ul>
                 </li>

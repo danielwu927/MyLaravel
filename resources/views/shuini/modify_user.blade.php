@@ -1,5 +1,12 @@
+
+{{--/**--}}
+ {{--* Created by PhpStorm.--}}
+ {{--* User: chende--}}
+ {{--* Date: 17/9/15--}}
+ {{--* Time: 下午7:01--}}
+ {{--*/--}}
 <!DOCTYPE html>
-<html>
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,14 +21,27 @@
     <link href="/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE 谷歌字体 FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <script>
+        function initradio(rName,rValue){
+            var rObj = document.getElementsByName(rName);
+
+            for(var i = 0;i < rObj.length;i++){
+                if(rObj[i].value == rValue){
+                    rObj[i].checked =  'checked';
+                }
+            }
+        }
+    </script>
 </head>
 <body>
-<div id="wrapper">
-    <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+<div id="wrapper" >
+    <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom:0">
+
         <div class="navbar-header">
             <a class="navbar-brand" href="#">后台管理</a>
         </div>
-        <div class="header-right">
+
+        <div class="header-right" >
             <img src="/img/logo-whut.png" width="400" height="50"/></a>
         </div>
     </nav>
@@ -29,8 +49,9 @@
     <nav class="navbar-default navbar-side" role="navigation">
         <div class="sidebar-collapse">
             <ul class="nav" id="main-menu">
-                <li>
+                <li >
                     <div class="user-img-div">
+
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="/img/admin.jpg" class="user-image" alt="User Image">
 
@@ -38,6 +59,7 @@
                                 <span style="color:#F00">admin</span>
                                 <br />
                                 <ul class="dropdown-menu">
+
                                     <!-- Menu Footer-->
                                     <li class="user-footer">
                                         <div class="pull-left">
@@ -54,7 +76,7 @@
                     </div>
                 </li>
                 <li>
-                    <a class="active-menu" href="admin_home.blade.php"><i class="fa fa-dashboard "></i>主面板</a>
+                    <a class="active-menu" href="/admin/admin_home.blade.php"><i class="fa fa-dashboard "></i>主面板</a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-desktop "></i>新闻与通知<span class="fa arrow"></span></a>
@@ -133,49 +155,93 @@
         <div id="page-inner">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="page-head-line">新建通知</h1>
-                    <h1 class="page-subhead-line">您可以创建通知，通知会按照创建时间和优先级进行显示。</h1>
+
+                    <h1 class="page-subhead-line">您可以在此处修改用户信息</h1>
                 </div>
             </div> <!-- row -->
+
             <div class="content body">
-                <a href="notice_list.php" class="btn btn-primary btn-flat" id="return">返回</a>
+                <a href="user_list.blade.php" class="btn btn-primary btn-flat" id="check_user_list">查看用户列表</a>
                 <div class="box box-primary">
                     <div class="box-header with-border">
-                        <h3 class="box-title">填写通知信息</h3>
+                        <h3 class="box-title">填写用户信息</h3>
                     </div>
-                    <form role="form" method="post" action="create_notice.php">
+                    <form role="form" id="create_user" method="post" action="/admin/update_user/{{$user->id}}" onsubmit="checkMes()">
+
                         <div class="box-body">
+
+                            <!--                                <input type="hidden" name="_token" value=/>-->
                             <div class="form-group">
-                                <label for="title">标题</label>
-                                <input class="form-control" id="title" placeholder="请输入新闻标题" type="text">
+                                <input type="hidden" name="_token" value="<?php  echo csrf_token(); ?>" />
+                                <label for="accountId">用户名</label>
+                                <input class="form-control" name="username" id="username" value="{{$user->username}}" type="text">
                             </div>
                             <div class="form-group">
-                                <label for="content">内容</label>
-                                <input class="form-control" id="content" placeholder="请输入新闻内容" type="text">
+                                <label for="password">密码</label>
+                                <input class="form-control" name="password" id="password" placeholder="请输入新密码" type="text">
                             </div>
                             <div class="form-group">
-                                <label for="level">重要等级</label>
-                                <select class="form-control" id="level">
-                                    <option value="3">重要</option>
-                                    <option value="2">临时</option>
-                                    <option value="1">普通</option>
+                                <label for="description">描述</label>
+                                <input class="form-control" name="description" id="description" value="{{$user->description}}" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">邮箱</label>
+                                <input class="form-control" name="email" id="email" value="{{$user->email}}" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="status">选择用户状态</label>
+                                <select class="form-control" id="status" name="status">
+                                    <option value="1">激活</option>
+                                    <option value="0">冻结</option>
                                 </select>
                             </div>
+                            <!--                                <div class="form-group">-->
+                            <!--                                    <label for="factoryId">选择用户所在水泥厂</label>-->
+                            <!--                                    <select class="form-control" id="factoryId">-->
+                            <!--                                        <option value="-1">测试用水泥厂</option>-->
+                            <!--                                        <option value="1">1</option>-->
+                            <!--                                    </select>-->
+                            <!--                                </div>-->
                             <div class="form-group">
-                                <label for="beginTime">生效时间</label>
-                                <input class="form-control" id="beginTime" placeholder="请输入生效时间" type="text">
-                            </div>
-                            <div class="form-group">
-                                <label for="endTime">失效时间</label>
-                                <input class="form-control" id="endTime" placeholder="请输入失效时间" type="text">
+                                <label for="roleList">用户角色</label>
+                                <div id="roleList">
+                                    <table class="table table-responsive">
+                                        <tbody>
+                                        <!--                                            <tr>-->
+                                        <!--                                                <td><input value="19" name="role" type="checkbox">管理员</td>-->
+                                        <!--                                                <td><input value="20" name="role" type="checkbox">项目组负责人</td>-->
+                                        <!--                                                <td><input value="22" name="role" type="checkbox">水泥厂用户</td>-->
+                                        <!--                                            </tr>-->
+                                        <!--                                            <tr>-->
+                                        <!--                                                <td><input value="23" name="role" type="checkbox">课题组负责人</td>-->
+                                        <!--                                                <td><input value="24" name="role" type="checkbox">专家组</td>-->
+                                        <!--                                                <td><input value="25" name="role" type="checkbox">课题组成员</td>-->
+                                        <!--                                            </tr>-->
+
+                                        <tr>
+                                            <td><input value="5" name="role" type="radio">管理员</td>
+                                            <td><input value="4" name="role" type="radio">专家组成员</td >
+                                            <td><input value="3" name="role" type="radio">课题组成员</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input value="2" name="role" type="radio">水泥厂用户</td>
+                                            <td><input value="1" name="role" type="radio">游客</td>
+
+
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                         <div class="box-footer" align="right">
-                            <input class="btn btn-primary btn-flat" id="submit" value="发布" type="button">
+                            <input class="btn btn-primary btn-flat" id="submit" value="提交修改" type="submit" >
                         </div>
                     </form>
+                    <script>  initradio('role','{{$user->role}}');</script>
                 </div>
-            </div><!--content-->
+            </div><!--content body-->
         </div><!--page-inner  -->
     </div><!-- page-wrapper  -->
 </div><!-- wrapper  -->
@@ -191,6 +257,55 @@
 <!-- CUSTOM SCRIPTS -->
 <script src="/js/custom01.js"></script>
 
+<SCRIPT>
+
+    function validate(){
+        var result=false;
+        var radios = document.getElementsByName("role");
+        for(var i=0;i<radios .length;i++)
+        {
+
+            if(radios[i].checked)
+            {
+                resualt=true;
+            }
+        }
+        if(!result)
+        {
+            alert("请选择用户角色");
+        }
+        return result;
+    }
+
+    function checkMes(){
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+//        var role = document.getElementsByName("role").value;
+        var result=false;
+        var radios = document.getElementsByName("role");
+        for(var i=0;i<radios .length;i++)
+        {
+
+            if(radios[i].checked)
+            {
+                resualt=true;
+            }
+        }
+        if(!result)
+        {
+            alert("请选择用户角色");
+        }
+        return result;
+
+
+
+//        if(role == ""  ){
+//            alert("用户角色不能为空");
+//            return false;
+//        }
+        //    document.getElementById("create_user").submit();
+    }
+</SCRIPT>
 
 </body>
 </html>
