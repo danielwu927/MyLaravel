@@ -9,7 +9,8 @@
     <link type="text/css" href="css/bootstrap.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic,500italic,500,300italic,300'
         rel='stylesheet' type='text/css'>
-    <link type="text/css" href="icons/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!--fa fa-icon-->
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link type="text/css" href="icons/rondo/style.css" rel="stylesheet">
     <link href="/css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
     <link type="text/css" href="css/owl.carousel.css" rel="stylesheet">
@@ -259,17 +260,18 @@
             <div class="col-md-4 col-md-push-1">
                 <div class="gtco-widget">
                     <h3>关于我们</h3>
-                    <h3><p style="font-size:15px">2014-2017</p>
-                    <p>《我国水泥工业环境状况调查》科技基础性工作专题网站</p></h3>
+                    <li><a class="fa fa-clock-o fa-lg"></a></p><h3>2014-2017</h3></li>
+                    <li><a class="fa fa-won fa-lg"></a></p><h3>《我国水泥工业环境状况调查》
+                    </p>科技基础性工作专题网站</h3></li>
                 </div>
             </div>
             <div class="col-md-4 col-md-push-1">
                 <div class="gtco-widget" style="padding-left:50px">
                     <h3>友情链接</h3>
                     <span class="gtco-footer-links">
-                        <li><a class="fa fa-university"></a>
+                        <li><a class="fa fa-university fa-lg"></a>
                         <p></p>
-                        <h3><a href="http://i.whut.edu.cn/" style="font-size:15px"><font color="#000000">武汉理工大学</font></a></h3>
+                        <a href="http://i.whut.edu.cn/" style="font-size:15px"><h3>武汉理工大学</h3></a>
                         </li>
                     </span>
                 </div>
@@ -279,37 +281,26 @@
                     <h3>联系我们</h3>
                     <span class="gtco-quick-contact">
                         <li><a href="#" onmouseover="dhOn()" onmouseout="dhOut()">
-                        <i class="fa fa-phone"></i> <h3 style="line-height:18px">13163353507</h3></a></li>
-                        <li><a href="#"><i class="fa fa-envelope"></i>
+                        <i class="fa fa-phone fa-lg"></i> <h3 style="line-height:18px">13163353507</h3></a></li>
+                        <li><a href="#"><i class="fa fa-envelope fa-lg"></i>
                         <h3 style="line-height:18px">178791827@qq.com</h3></a></li>
                         <li><a href="#" onmouseover="weixinOn()" onmouseout="weixinOut()">
-                        <i class="fa fa-weixin"></i>
+                        <i class="fa fa-weixin fa-lg"></i>
                         <h3 style="line-height:18px">微信</h3></a>
                         </li>
                         <li id="weixin" style="display: none; font-size: 15px;">
-                        <img style="width: 150px; height: 150px" alt="" src="img/clients/WX.jpg">
-                        <div style="margin-left: 20px; font-weight: 600">扫一扫添加微信</div>
+                        <img style="width: 100px; height: 100px" alt="" src="img/clients/WX.jpg">
+                        <div style="margin-left: 5px; font-weight: 600">扫一扫添加微信</div>
                         </li>
                         <li id="dianhua" style="display: none; font-size: 15px; height: 200px;">
-                        <img style="width: 149px; height: 150px" alt="" src="img/clients/SJ.png">
-                        <div style="margin-left: 10px; font-weight: 600">扫一扫添加手机号码</div>
+                        <img style="width: 100px; height: 100px" alt="" src="img/clients/SJ.png">
+                        <div style="margin-left: 5px; font-weight: 600">扫一扫添加手机号码</div>
                         </li>
                     </span>
                 </div>
             </div>
         </div>
-        <div class="row copyright" id="footer">
-            <div class="col-md-12">       
-                <p class="pull-right">
-                <ul class="gtco-social-icons pull-right">
-                    <li><a href="#"><i class="icon-twitter"></i></a></li>
-                    <li><a href="#"><i class="icon-facebook"></i></a></li>
-                    <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                    <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                </ul>
-                </p>
-            </div>
-        </div> 
+        
     </footer>
     <script><!--鼠标移动到文字显示图片-->
         function weixinOn() {
@@ -326,16 +317,6 @@
         }
     </script>
     <script>
-        $(".slider").YuxiSlider({
-            width : 800, //容器宽度
-            height : 380, //容器高度
-            control : $('.control'), //绑定控制按钮
-            during : 4000, //间隔4秒自动滑动
-            speed : 800, //移动速度0.8秒
-            mousewheel : true, //是否开启鼠标滚轮控制
-            direkey : true
-        //是否开启左右箭头方向控制
-        });
         
         function logout() {
             zeroModal.confirm({
