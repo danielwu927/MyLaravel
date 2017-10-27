@@ -99,7 +99,7 @@
                                 <a href="create_user.php"><i class="fa fa-user"></i>创建用户</a>
                             </li>
                              <li>
-                                <a href="user_list.php"><i class="fa fa-user"></i>用户列表</a>
+                                <a href="user_list.blade.php"><i class="fa fa-user"></i>用户列表</a>
                             </li>                          
                         </ul>
                     </li>                    
@@ -210,13 +210,13 @@
    
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY 脚本 SCRIPTS -->
-    <script src="js/jquery-1.10.2.js"></script>
+    <script src="/js/jquery-1.10.2.js"></script>
     <!-- BOOTSTRAP SCRIPTS -->
-    <script src="js/bootstrap.js"></script>
+    <script src="/js/bootstrap.js"></script>
     <!-- METISMENU SCRIPTS -->
-    <script src="js/jquery.metisMenu.js"></script>
+    <script src="/js/jquery.metisMenu.js"></script>
        <!-- CUSTOM SCRIPTS -->
-    <script src="js/custom01.js"></script>
+    <script src="/js/custom01.js"></script>
     
 
 </body>

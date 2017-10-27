@@ -100,7 +100,7 @@
                                 <a href="create_user.php"><i class="fa fa-user"></i>创建用户</a>
                              </li>
                              <li>
-                                <a href="user_list.php"><i class="fa fa-user"></i>用户列表</a>
+                                <a href="/admin/user_list"><i class="fa fa-user"></i>用户列表</a>
                             </li>                          
                         </ul>
                     </li>                    
@@ -139,6 +139,7 @@
                     <div class="col-md-12">
                         <h1 class="page-head-line">用户列表</h1>
                         <h1 class="page-subhead-line">您可以创建管理用户。</h1>
+
                     </div>
                 </div> <!-- row -->
                 <div class="content body">
@@ -160,31 +161,63 @@
                                 </div>
                             </div>
                         </div>
+
+
+                        测试表达提交，多条件查询<br/>
+
+                        <form  class="form-inline" role="form" name="chaxun" action="/query"  method="get">
+                            <div class="form-group">
+
+                                <input type="hidden" name="_token" value="{{csrf_token()}}" />
+
+                                <label >用户名</label>
+                                <input type="text" name="username"><br/>
+
+                                <label >邮箱</label>
+                                <input type="text" name="email"><br/>
+
+                                {{--<label class="sr-only" for="name">角色</label>--}}
+                                {{--<input type="text" name="role"><br/>--}}
+
+
+
+                                <button type="submit" class="btn btn-default" >查询</button>
+                            </div>
+                        </form>
+
+
+
                         <div class="row">
                             <div class="col-sm-12">
                                 <table id="usersTable" class="table table-hover table-responsive dataTable no-footer" role="grid" aria-describedby="usersTable_info" style="width: 1015px;">
                                 <thead>
                                 <tr role="row">
                                     <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 154px;">帐号</th>
-                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 166px;">描述</th>
-                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 130px;">所在水泥厂</th>
+                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 166px;">角色</th>
+                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 130px;">描述信息</th>
                                     <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 227px;">邮箱</th>
                                     <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 81px;">状态</th>
                                     <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 180px;">操作</th>
                                 </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($users as $user)
                                 <tr role="row" class="odd">
-                                    <td>admin</td>
-                                    <td>拥有最大权限</td>
-                                    <td>-1</td>
-                                    <td>11111@qq.com</td>
-                                    <td>已激活</td>
-                                    <td><button class="btn btn-danger btn-xs btn-freeze btn-flat" data-id="admin">冻结</button> 
-                                    <button class="btn btn-primary btn-xs btn-modify btn-flat" data-id="admin">修改</button>                                       
-                                    <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="admin">删除</button></td>
+                                    <td>{{$user->username}}</td>
+                                    <td>{{$user->role}}</td>
+                                    <td>{{$user->description}}</td>
+                                    <td>{{$user->email}}</td>
+                                    <td>{{$user->status==1?'已激活':'冻结'}}</td>
+                                    <td><button class="btn btn-active btn-xs btn-delete btn-flat" data-id="admin">冻结</button>
+                                    <button class="btn btn-primary btn-xs btn-modify btn-flat" data-id="admin"  onclick="mod_user({{$user->id}})">修改</button>
+                                    <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="admin"  onclick="del_user({{$user->id}})">删除</button></td>
                                 </tr>
-                                <tr role="row" class="even">
+                                @endforeach
+                                <div class="col-sm-7" align="right"> {!! $users->links() !!}
+                                </div>
+
+                                <!--
+                                       <tr role="row" class="even">
                                     <td>ktzcy</td><td>课题组成员</td>
                                     <td>-1</td><td>1718@qq.com</td>
                                     <td>已激活</td>
@@ -221,46 +254,7 @@
                                     <button class="btn btn-primary btn-xs btn-modify btn-flat" data-id="wang">修改</button>                                       
                                     <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="wang">删除</button></td>
                                 </tr>
-                                <tr role="row" class="even">
-                                    <td>zhang</td>
-                                    <td>水泥厂用户1</td>
-                                    <td>-1</td>
-                                    <td>178791827@qq.com</td>
-                                    <td>已激活</td>
-                                    <td><button class="btn btn-danger btn-xs btn-freeze btn-flat" data-id="zhang">冻结</button> 
-                                    <button class="btn btn-primary btn-xs btn-modify btn-flat" data-id="zhang">修改</button>                                       
-                                    <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="zhang">删除</button></td>
-                                </tr>
-                                <tr role="row" class="odd">
-                                    <td>zhao</td>
-                                    <td>项目组负责人2</td>
-                                    <td>-1</td>
-                                    <td>11@163.com</td>
-                                    <td>已激活</td>
-                                    <td><button class="btn btn-danger btn-xs btn-freeze btn-flat" data-id="zhao">冻结</button> 
-                                    <button class="btn btn-primary btn-xs btn-modify btn-flat" data-id="zhao">修改</button>                                       
-                                    <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="zhao">删除</button></td>
-                                </tr>
-                                    <tr role="row" class="even">
-                                    <td>zhouran</td>
-                                    <td>课题组负责人8</td>
-                                    <td>-1</td>
-                                    <td>178791827@qq.com</td>
-                                    <td>已激活</td>
-                                    <td><button class="btn btn-danger btn-xs btn-freeze btn-flat" data-id="zhouran">冻结</button> 
-                                    <button class="btn btn-primary btn-xs btn-modify btn-flat" data-id="zhouran">修改</button>                                       
-                                    <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="zhouran">删除</button></td>
-                                </tr>
-                                <tr role="row" class="odd">
-                                    <td>zhuanjia</td>
-                                    <td>专家</td>
-                                    <td>-1</td>
-                                    <td>121212@qq.com</td>
-                                    <td>已激活</td>
-                                    <td><button class="btn btn-danger btn-xs btn-freeze btn-flat" data-id="zhuanjia">冻结</button> 
-                                    <button class="btn btn-primary btn-xs btn-modify btn-flat" data-id="zhuanjia">修改</button>                                       
-                                    <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="zhuanjia">删除</button></td>
-                                </tr>
+-->
                                 </tbody>
                                 </table>
                             </div>
@@ -296,7 +290,17 @@
     <script src="/js/jquery.metisMenu.js"></script>
        <!-- CUSTOM SCRIPTS -->
     <script src="/js/custom01.js"></script>
-    
+    <script>
+
+        function  del_user(id) {
+            if (confirm('您确定要删除这个用户吗？'))
+                window.location="/admin/del_user/"+id  ;
+        }
+
+        function mod_user(id){
+            window.location="/admin/mod_user/"+id ;
+        }
+    </script>
 
 </body>
 </html>

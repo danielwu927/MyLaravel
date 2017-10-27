@@ -96,7 +96,7 @@
                                 <a href="create_user.php"><i class="fa fa-user"></i>创建用户</a>
                             </li>
                             <li>
-                                <a href="user_list.php"><i class="fa fa-user"></i>用户列表</a>
+                                <a href="user_list.blade.php"><i class="fa fa-user"></i>用户列表</a>
                             </li>                          
                         </ul>
                     </li>                    
@@ -138,7 +138,7 @@
                     </div>
                 </div> <!-- row -->
                 <div class="content body">
-                    <a href="user_list.php" class="btn btn-primary btn-flat" id="check_userlist">查看角色列表</a>
+                    <a href="user_list.blade.php" class="btn btn-primary btn-flat" id="check_userlist">查看角色列表</a>
                     <div class="box box-primary">
                         <div class="box-header with-border">
                             <h3 class="box-title">填写角色信息</h3>
