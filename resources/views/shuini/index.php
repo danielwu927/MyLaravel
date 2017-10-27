@@ -316,20 +316,6 @@
             $('#dianhua').css('display', 'none');
         }
     </script>
-    <script>
-        
-        function logout() {
-            zeroModal.confirm({
-                content: '确定注销吗？',
-                okFn: function() {
-                    window.location.href="signout.html"
-                },
-                cancelFn: function() {
-                   
-                }
-            });
-        }
-    </script>
     <!--Scripts-->
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
