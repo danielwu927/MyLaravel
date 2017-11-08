@@ -1,247 +1,289 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>后台管理操作</title>
-    <!-- BOOTSTRAP 引导 STYLES-->
-    <link href="/css/bootstrap01.css" rel="stylesheet" />
-    <!-- FONTAWESOME STYLES-->
-    <link href="/css/font-awesome.css" rel="stylesheet" />
-       <!--CUSTOM BASIC 样式 STYLES-->
-    <link href="/css/basic.css" rel="stylesheet" />
-    <!--CUSTOM MAIN 风格 STYLES-->
-    <link href="/css/custom.css" rel="stylesheet" />
-    <!-- GOOGLE 谷歌字体 FONTS-->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <meta charset="UTF-8" />
+    <title>调研表</title>
+    <style>
+        #form_head table tr td input{
+            border:none;
+            border-bottom:black solid 1px;
+        }
+        #form_tail table tr td p#one input{
+            width:70px;
+            height:40px;
+        }
+
+    </style>
+
+
 </head>
 <body>
-    <div id="wrapper" >
-        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom:0">
-            
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">后台管理</a>
-            </div>
+<form action="javascript:" method="get">
+    <div id="form_head" align="center" valign="bottom">
+        <caption><font size="6">水泥企业信息调研表</font></caption>
+        <table  cellspacing="0" cellpadding="0" width="1000" bgcolor=""  >
+            <tr >  <!--1-->
+                <td>企业名称：<input type="text" name="com_name" /></td>
+                <td>生产线名称：<input type="text" name="pro_name" /></td>
+                <td>生产线设计规模：<input type="text" name="pro_scale" /></td>
+                <td>年运转天数：<input type="text" name="run_day" /></td>
+            </tr>
+            <tr> <!--2-->
+                <td colspan="2">企业所在地址：<input type="text" name="com_address"  size="50" /></td>
+                <td>填表联系人：<input type="text" name="link_man" /></td>
+                <td>联系电话：<input type="text" name="link_phone" /></td>
 
-            <div class="header-right" >
-                <img src="/img/logo-whut.png" width="400" height="50"/></a>
-            </div>
-        </nav>
-        <!-- navbar -->
-        <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-                    <li >
-                        <div class="user-img-div">
-                            
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="/img/admin.jpg" class="user-image" alt="User Image">
+            </tr>
+        </table>
+    </div>
+    <div id="form_one" align="center" valign="bottom">
+        <table border="1" cellspacing="0" cellpadding="0" width="1000" bgcolor="">
+            <tr align="center">
+                <td rowspan="8" width="30" >资<br/>源<br/>消<br/>耗</td>
+                <td rowspan="2" width="100">类别</td>
+                <td colspan="6">熟料烧成用原材料（含替代原料）</td>
+                <td colspan="3">燃料（含替代燃料）</td>
+                <td rowspan="3">熟料产量</td>
+            </tr>
+            <tr align="center">
+                <td>原料 1#</td>
+                <td>原料 2#</td>
+                <td>原料 3#</td>
+                <td>原料 4#</td>
+                <td>原料 5#</td>
+                <td>原料 6#</td>
+                <td>燃料 1#</td>
+                <td>燃料 2#</td>
+                <td>燃料 3#</td>
+            </tr>
+            <tr align="center">
+                <td>原材料名称</td>
+                <td><input type="text" name="熟料烧成原料1" placeholder="如：石灰石" size="9" /></td>
+                <td><input type="text" name="熟料烧成原料2" size="9" /></td>
+                <td><input type="text" name="熟料烧成原料3" size="9" /></td>
+                <td><input type="text" name="熟料烧成原料4" size="9" /></td>
+                <td><input type="text" name="熟料烧成原料5" size="9" /></td>
+                <td><input type="text" name="熟料烧成原料6" size="9" /></td>
+                <td><input type="text" name="熟料烧成燃料1" placeholder="如：原煤" size="9" /></td>
+                <td><input type="text" name="熟料烧成燃料2" size="9" /></td>
+                <td><input type="text" name="熟料烧成燃料3" size="9" /></td>
+            </tr>
+            <tr align="center">
+                <td>资源消耗，<br/>万吨/年</td>
+                <td><input type="text" name="烧成消耗原料1" size="9" /></td>
+                <td><input type="text" name="烧成消耗原料2" size="9" /></td>
+                <td><input type="text" name="烧成消耗原料3" size="9" /></td>
+                <td><input type="text" name="烧成消耗原料4" size="9" /></td>
+                <td><input type="text" name="烧成消耗原料5" size="9" /></td>
+                <td><input type="text" name="烧成消耗原料6" size="9" /></td>
+                <td><input type="text" name="烧成消耗燃料1" size="9" /></td>
+                <td><input type="text" name="烧成消耗燃料2" size="9" /></td>
+                <td><input type="text" name="烧成消耗燃料3" size="9" /></td>
+                <td><input type="text" name="熟料产量" size="9" /></td>
+            </tr>
+            <tr align="center">
+                <td rowspan="2">类别</td>
+                <td colspan="9" align="center">水泥制成用原材料（含替代原料）</td>
+                <td rowspan="3">水泥产量</td>
+            </tr>
+            <tr align="center">
+                <td>原料 1#</td>
+                <td>原料 2#</td>
+                <td>原料 3#</td>
+                <td>原料 4#</td>
+                <td>原料 5#</td>
+                <td>原料 6#</td>
+                <td>原料 7#</td>
+                <td>原料 8#</td>
+                <td>原料 9#</td>
+            </tr>
+            <tr align="center">
+                <td>原材料名称</td>
+                <td><input type="text" name="制成原料1" placeholder="如：熟料" size="9" /></td>
+                <td><input type="text" name="制成原料2" placeholder="天然石膏" size="9" /></td>
+                <td><input type="text" name="制成原料3" placeholder="脱硫石膏" size="9" /></td>
+                <td><input type="text" name="制成原料4" size="9" /></td>
+                <td><input type="text" name="制成原料5" size="9" /></td>
+                <td><input type="text" name="制成原料6" size="9" /></td>
+                <td><input type="text" name="制成原料7" size="9" /></td>
+                <td><input type="text" name="制成原料8" size="9" /></td>
+                <td><input type="text" name="制成原料9" size="9" /></td>
+            </tr>
+            <tr width="100" align="center">
+                <td>消耗情况，<br/>万吨/年</td>
+                <td><input type="text" name="制成消耗原料1" size="9" /></td>
+                <td><input type="text" name="制成消耗原料2" size="9" /></td>
+                <td><input type="text" name="制成消耗原料3" size="9" /></td>
+                <td><input type="text" name="制成消耗原料4" size="9" /></td>
+                <td><input type="text" name="制成消耗原料5" size="9" /></td>
+                <td><input type="text" name="制成消耗原料6" size="9" /></td>
+                <td><input type="text" name="制成消耗原料7" size="9" /></td>
+                <td><input type="text" name="制成消耗原料8" size="9" /></td>
+                <td><input type="text" name="制成消耗原料9" size="9" /></td>
+                <td><input type="text" name="水泥产量" size="9" /></td>
+            </tr>
+        </table>
+    </div>
+    <div id="form_two" align="center" valign="bottom">
+        <table border="1" cellspacing="0" cellpadding="0" width="1000" bgcolor="">
+            <tr align="center">
+                <td rowspan="3" width="30">能<br/>源<br/>消<br/>耗</td>
+                <td width="100">项目</td>
+                <td>生料磨粉<br/>工段电耗</td>
+                <td>可比熟料<br/>综合煤耗</td>
+                <td>可比熟料<br/>综合电耗</td>
+                <td>可比熟料<br/>综合能耗</td>
+                <td>可比水泥<br/>综合电耗</td>
+                <td>可比水泥<br/>综合能耗</td>
+                <td>单位熟料<br/>余热发电量</td>
+            </tr>
+            <tr align="center">
+                <td>单位</td>
+                <td>kWh/t</td>
+                <td>kgce/t</td>
+                <td>kWh/t</td>
+                <td>kgce/t</td>
+                <td>kWh/t</td>
+                <td>kgce/t</td>
+                <td>kWh/t</td>
+            </tr>
+            <tr align="center">
+                <td>数值</td>
+                <td><input type="text" name="能源消耗值1" size="9" /></td>
+                <td><input type="text" name="能源消耗值2" size="9" /></td>
+                <td><input type="text" name="能源消耗值3" size="9" /></td>
+                <td><input type="text" name="能源消耗值4" size="9" /></td>
+                <td><input type="text" name="能源消耗值5" size="9" /></td>
+                <td><input type="text" name="能源消耗值6" size="9" /></td>
+                <td><input type="text" name="能源消耗值7" size="9" /></td>
+            </tr>
+        </table>
+    </div>
+    <div id="form_three" align="center" valign="bottom">
+        <table border="1" cellspacing="0" cellpadding="0" width="1000" bgcolor="">
+            <tr align="center">
+                <td rowspan="5" width="30">废<br/>气<br/>排<br/>放</td>
+                <td rowspan="2" width="100">项目</td>
+                <td colspan="5">颗粒物</td>
+                <td>SO₂</td>
+                <td>NOx</td>
+                <td>喷氮</td>
+                <td colspan="3">脱硝工艺（划勾）</td>
+            </tr>
+            <tr align="center">
+                <td>窑头</td>
+                <td>窑尾</td>
+                <td>水泥磨</td>
+                <td>煤磨</td>
+                <td>包装机</td>
+                <td>窑尾</td>
+                <td>窑尾</td>
+                <td>kg/t熟料</td>
+                <td width="25">1</td>
+                <td>SNCR</td>
+                <td><select name="SNCR">
+                        <option value="空"></option>
+                        <option value="选中">√</option>
+                    </select>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>年排放量，<br/>吨/年</td>
+                <td><input type="text" name="废气排放量1" size="9" /></td>
+                <td><input type="text" name="废气排放量2" size="9" /></td>
+                <td><input type="text" name="废气排放量3" size="9" /></td>
+                <td><input type="text" name="废气排放量4" size="9" /></td>
+                <td><input type="text" name="废气排放量5" size="9" /></td>
+                <td><input type="text" name="废气排放量6" size="9" /></td>
+                <td><input type="text" name="废气排放量7" size="9" /></td>
+                <td rowspan="2"><input type="text" name="废气排放_喷氮" size="9" /></td>
+                <td>2</td>
+                <td>分级燃烧</td>
+                <td><select name="分级燃烧" size="1">
+                        <option value="空"></option>
+                        <option value="选中">√</option>
+                    </select>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>排放浓度，<br/>mg/m³</td>
+                <td><input type="text" name="废气排放浓度1" size="9" /></td>
+                <td><input type="text" name="废气排放浓度2" size="9" /></td>
+                <td><input type="text" name="废气排放浓度3" size="9" /></td>
+                <td><input type="text" name="废气排放浓度4" size="9" /></td>
+                <td><input type="text" name="废气排放浓度5" size="9" /></td>
+                <td><input type="text" name="废气排放浓度6" size="9" /></td>
+                <td><input type="text" name="废气排放浓度7" size="9" /></td>
+                <td>3</td>
+                <td>1+2</td>
+                <td><select name="1+2">
+                        <option value="空"></option>
+                        <option value="选中">√</option>
+                    </select>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>除尘设备<br/>（电/袋）</td>
+                <td><input type="text" size="9" /></td>
+                <td><input type="text" size="9" /></td>
+                <td><input type="text" size="9" /></td>
+                <td><input type="text" size="9" /></td>
+                <td><input type="text" size="9" /></td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>4</td>
+                <td>其它</td>
+                <td><select name="其它">
+                        <option value="空"></option>
+                        <option value="选中">√</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="form_four" align="center" valign="bottom">
+        <table border="1" cellspacing="0" cellpadding="0" width="1000" bgcolor="">
+            <tr align="center">
+                <td rowspan="5" width="30">主<br/>要<br/>设<br/>备</td>
+                <td rowspan="2" width="100">设备名称</td>
+                <td colspan="3">生料磨</td>
+                <td>窑</td>
+                <td colspan="3">水泥磨</td>
+            </tr>
+            <tr align="center">
+                <td>粉磨方式</td>
+                <td>规格型号</td>
+                <td>数量</td>
+                <td>规格</td>
+                <td>粉磨方式</td>
+                <td>规格型号</td>
+                <td>数量</td>
+            </tr>
+            <tr align="center">
+                <td width="100">设备情况</td>
+                <td><input type="text" name="石料磨粉磨方式" size="9" /></td>
+                <td><input type="text" name="石料磨规格型号" size="9" /></td>
+                <td><input type="text" name="石料磨数量" size="9" /></td>
+                <td><input type="text" name="窑规格" size="9" /></td>
+                <td><input type="text" name="水泥磨粉磨方式" size="9" /></td>
+                <td><input type="text" name="水泥磨规格型号" size="9" /></td>
+                <td><input type="text" name="水泥磨数量" size="9" /></td>
+            </tr>
+        </table>
+    </div>
+    <div id="form_tail" align="center" valign="bottom">
+        <table border="0" cellspacing="0" cellpadding="0" width="1000" bgcolor="">
+            <tr>
+                <td align="left">*备注，若无改数据计算值，可空缺</td>
+            </tr>
+            <tr>
+                <td><p align="right" id="one"><input type="submit" value="&nbsp;提&nbsp;&nbsp;&nbsp;交&nbsp;" />&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="&nbsp;重&nbsp;&nbsp;&nbsp;置&nbsp;" /></p></td>
+            </tr>
+        </table>
+    </div>
 
-                            <div class="inner-text" style="font-size:28px">
-                                <span style="color:#F00">admin</span>
-                            <br />
-                            <ul class="dropdown-menu">
-                        
-                            <!-- Menu Footer-->
-                            <li class="user-footer">
-                                <div class="pull-left">
-                                    <a href="javascript:void(0);" class="btn btn-default btn-flat" id="btnUserInfo">用户信息</a>
-                                </div>
-                                <div class="pull-right">
-                                    <a href="javascript:void(0);" class="btn btn-default btn-flat" id="btnSignOut">注销</a>
-                                </div>
-                            </li>
-                            </ul>
-               
-                            <small style="font-size:17px">SUPER </small>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="active-menu" href="admin_home.blade.php"><i class="fa fa-dashboard "></i>主面板</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-desktop "></i>新闻与通知<span class="fa arrow"></span></a>
-                         <ul class="nav nav-second-level">
-                            <li>
-                                <a href="news_list.php"><i class="fa fa-bell"></i>新闻中心</a>
-                            </li>
-                            <li>
-                                <a href="notice_list.php"><i class="fa fa-bell "></i>通知中心</a>
-                            </li>                                                     
-                        </ul>
-                    </li>
-                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o"></i>问卷管理<span class="fa arrow"></span></a>
-                         <ul class="nav nav-second-level">
-                            <li>
-                                <a href="new_create_questionnaire_template.php"><i class="fa fa-file-excel-o"></i>新建问卷模板</a>
-                            </li>
-                            <li>
-                                <a href="questionnaire_template.php"><i class="fa fa-file-excel-o"></i>问卷模板列表</a>
-                            </li>                                                     
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-file-sound-o"></i>问卷邀请管理<span class="fa arrow"></span></a>
-                         <ul class="nav nav-second-level">
-                            <li>
-                                <a href="register_questionnaire_invite.php"><i class="fa fa-file-text"></i>登记问卷邀请</a>
-                            </li>
-                            <li>
-                                <a href="questionnaire_invite.php"><i class="fa fa-file-text"></i>问卷邀请列表</a>
-                            </li>                          
-                        </ul>
-                    </li>
-                     <li>
-                        <a href="#"><i class="fa fa-group"></i>用户管理<span class="fa arrow"></span></a>
-                         <ul class="nav nav-second-level">                           
-                             <li>
-                                <a href="create_user.php"><i class="fa fa-user"></i>创建用户</a>
-                            </li>
-                             <li>
-                                <a href="user_list.blade.php"><i class="fa fa-user"></i>用户列表</a>
-                            </li>                          
-                        </ul>
-                    </li>                    
-                    <li>
-                        <a href="#"><i class="fa fa-unlock-alt"></i>权限管理 <span class="fa arrow"></span></a>
-                         <ul class="nav nav-second-level">
-                            <li>
-                                <a href="port_list.php"><i class="fa fa-key"></i>接口列表</a>
-                            </li>
-                             <li>
-                                <a href="new_create_port.php"><i class="fa fa-key"></i>新建接口</a>
-                            </li>
-                            <li>
-                                <a href="role_list.php"><i class="fa fa-key"></i>角色列表</a>
-                            </li>
-                            <li>
-                                <a href="new_create_role.php"><i class="fa fa-key"></i>新建角色</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-gears"></i>系统控制面板<span class="fa arrow"></span></a>
-                         <ul class="nav nav-second-level">
-                            <li>
-                                <a href="system_parameter.php"><i class="fa fa-gear"></i>系统参数</a>
-                            </li>
-                        </ul>
-                    </li>                  
-                </ul>
-            </div>
-        </nav>
-        <!-- navbar-default  -->
-        <div id="page-wrapper">
-            <div id="page-inner">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1 class="page-head-line">问卷模板列表</h1>
-                        <h1 class="page-subhead-line">您可以管理已经创建的问卷模板，或创建新的问卷模板。</h1>
-                    </div>
-                </div> <!-- row -->
-               
-                <div class="content body">
-                    <a href="new_create_questionnaire_template.php" class="btn btn-primary btn-flat" id="createNew_template">创建新模板</a><br><br>
-                    <div class="box box-body box-primary">
-                    <div id="wjTemplateTable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-                    <div class="row"><div class="col-sm-6"></div>
-                    <div class="col-sm-6"></div>
-                    </div>
-                    <div class="row">
-                    <div class="col-sm-12">
-                    <table id="wjTemplateTable" class="table table-hover table-responsive dataTable no-footer" role="grid" aria-describedby="wjTemplateTable_info" style="width: 1015px;">
-                    <thead>
-                        <tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 131px;">问卷名称</th>
-                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 236px;">问卷描述</th>
-                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 184px;">生效时间</th>
-                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 194px;">失效时间</th>
-                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 68px;">状态</th>
-                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 142px;">操作</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr role="row" class="odd"><td>2015信息简表</td>
-                        <td>2015</td><td>2016/6/1 上午8:00 </td>
-                        <td>2017/6/3 上午8:00 </td>
-                        <td>已发布</td>
-                        <td><button class="btn btn-primary btn-xs btn-show btn-flat" data-id="81">查看问卷</button>                                       
-                        <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="81">删除</button></td>
-                        </tr>
-                        <tr role="row" class="even">
-                        <td>测试问卷</td>
-                        <td>这是一个用来测试的问卷</td>
-                        <td>2017/1/4 上午8:00 </td>
-                        <td>2017/1/6 上午8:00 </td>
-                        <td>已发布</td>
-                        <td><button class="btn btn-primary btn-xs btn-show btn-flat" data-id="83">查看问卷</button>                                       
-                        <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="83">删除</button></td>
-                        </tr>
-                        <tr role="row" class="odd">
-                        <td>2018水泥模板</td>
-                        <td>最新版本</td>
-                        <td>2017/7/1 上午8:00 </td>
-                        <td>2020/2/11 上午8:00 </td>
-                        <td>已发布</td>
-                        <td><button class="btn btn-primary btn-xs btn-show btn-flat" data-id="84">查看问卷</button>                                      
-                        <button class="btn btn-danger btn-xs btn-delete btn-flat" data-id="84">删除</button></td>
-                        </tr>
-                    </tbody>
-                    </table>
-                    </div>
-                    </div>
-                    <div class="row">
-                    <div class="col-sm-5">
-                        <div class="dataTables_info" id="wjTemplateTable_info" role="status" aria-live="polite">第 1 页 / 总 1 页</div>
-                    </div>
-                    <div class="col-sm-7" align="right">
-                        <div class="dataTables_paginate paging_simple_numbers" id="wjTemplateTable_paginate">
-                            <ul class="pagination">
-                            <li class="paginate_button previous disabled" id="wjTemplateTable_previous"><a href="#" aria-controls="wjTemplateTable" data-dt-idx="0" tabindex="0">上一页</a></li>
-                            <li class="paginate_button active"><a href="#" aria-controls="wjTemplateTable" data-dt-idx="1" tabindex="0">1</a></li>
-                            <li class="paginate_button next disabled" id="wjTemplateTable_next"><a href="#" aria-controls="wjTemplateTable" data-dt-idx="2" tabindex="0">下一页</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    </div>
-                    </div>
-                </div><!--content body-->
-            </div><!--page-inner  -->
-        </div><!-- page-wrapper  -->
-    </div><!-- wrapper  -->
 
-   
-    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
-    <!-- JQUERY 脚本 SCRIPTS -->
-    <script src="/js/jquery-1.10.2.js"></script>
-    <!-- BOOTSTRAP SCRIPTS -->
-    <script src="/js/bootstrap.js"></script>
-    <!-- METISMENU SCRIPTS -->
-    <script src="/js/jquery.metisMenu.js"></script>
-       <!-- CUSTOM SCRIPTS -->
-    <script src="/js/custom01.js"></script>
-    
-
-
+</form>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
