@@ -12,10 +12,7 @@
             width:70px;
             height:40px;
         }
-
     </style>
-
-
 </head>
 <body>
 <form action="javascript:" method="get">
@@ -32,7 +29,6 @@
                 <td colspan="2">企业所在地址：<input type="text" name="com_address"  size="50" /></td>
                 <td>填表联系人：<input type="text" name="link_man" /></td>
                 <td>联系电话：<input type="text" name="link_phone" /></td>
-
             </tr>
         </table>
     </div>
@@ -282,8 +278,6 @@
             </tr>
         </table>
     </div>
-
-
 </form>
 </body>
 </html>
