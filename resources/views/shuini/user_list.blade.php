@@ -148,42 +148,99 @@
                     <div id="usersTable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
                         <div class="row">
                             <div class="col-sm-6">
-                                <div class="dataTables_length" id="usersTable_length">
-                                    <label>每页 <select name="usersTable_length" aria-controls="usersTable" class="form-control input-sm">
-                                    <option value="10">10</option>
-                                    <option value="20">20</option>
-                                    <option value="50">50</option></select> 条</label>
-                                </div>
+
                             </div>
-                            <div class="col-sm-6">
-                                <div id="usersTable_filter" class="dataTables_filter" align="right">
-                                    <label>搜索:<input class="form-control input-sm" placeholder="" aria-controls="usersTable" type="search"></label>
-                                </div>
-                            </div>
+
                         </div>
 
 
-                        测试表达提交，多条件查询<br/>
-
-                        <form  class="form-inline" role="form" name="chaxun" action="/query"  method="get">
-                            <div class="form-group">
+                        <form class="form-horizontal"   name="chaxun" action="/query"  method="get">
+                            <fieldset>
 
                                 <input type="hidden" name="_token" value="{{csrf_token()}}" />
+                                <div id="legend" class="">
+                                    <legend class="">用户查询</legend>
+                                </div>
 
-                                <label >用户名</label>
-                                <input type="text" name="username"><br/>
+                                <table  class="table">
+                                    <tr>
+                                        <td>
+                                            <div class="control-group">
 
-                                <label >邮箱</label>
-                                <input type="text" name="email"><br/>
+                                                <!-- Text input-->
+                                                <label class="control-label"  for="input01">邮箱</label>
+                                                <div class="controls">
+                                                    <input type="text" name="email"  placeholder="" class="input-xlarge">
+                                                    <p class="help-block"></p>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="control-group">
+
+                                                <!-- Text input-->
+                                                <label class="control-label"   for="input01">用户名</label>
+                                                <div class="controls">
+                                                    <input type="text"  name="username" placeholder="" class="input-xlarge">
+                                                    <p class="help-block"></p>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td> <div class="control-group">
+
+                                                <!-- Text input-->
+                                                <label class="control-label"  for="input01">描述信息</label>
+                                                <div class="controls">
+                                                    <input type="text"   name="description" placeholder="" class="input-xlarge">
+                                                    <p class="help-block"></p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="control-group">
+                                                <label class="control-label"></label>
+
+                                                <!-- Button -->
+                                                <div class="controls">
+                                                    <button  type="submit" class="btn btn-primary">查询</button>
+                                                </div>
+                                            </div>
+
+                                        </td>
+
+                                    </tr>
+                                </table>
+
+                            </fieldset>
+                        </form>
+
+
+
+                        {{--测试表达提交，多条件查询<br/>--}}
+
+                        {{--<form  class="form-inline" role="form" name="chaxun" action="/query"  method="get" >--}}
+                            {{--<div class="form-group">--}}
+
+                                {{--<input type="hidden" name="_token" value="{{csrf_token()}}" />--}}
+
+                                {{--<label >用户名</label>--}}
+                                {{--<input type="text" name="username"><br/>--}}
+
+                                {{--<label >邮箱</label>--}}
+                                {{--<input type="text" name="email"><br/>--}}
 
                                 {{--<label class="sr-only" for="name">角色</label>--}}
                                 {{--<input type="text" name="role"><br/>--}}
 
 
 
-                                <button type="submit" class="btn btn-default" >查询</button>
-                            </div>
-                        </form>
+                                {{--<button type="submit" class="btn btn-default" >查询</button>--}}
+                            {{--</div>--}}
+                        {{--</form>--}}
 
 
 
@@ -261,15 +318,15 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-5">
-                                <div class="dataTables_info" id="usersTable_info" role="status" aria-live="polite">第 1 页 / 总 1 页</div>
+                                {{--<div class="dataTables_info" id="usersTable_info" role="status" aria-live="polite">第 1 页 / 总 1 页</div>--}}
                             </div>
                             <div class="col-sm-7" align="right">
                                 <div class="dataTables_paginate paging_simple_numbers" id="usersTable_paginate">
-                                    <ul class="pagination"><li class="paginate_button previous disabled" id="usersTable_previous">
-                                    <a href="#" aria-controls="usersTable" data-dt-idx="0" tabindex="0">下一页</a></li>
-                                    <li class="paginate_button active"><a href="#" aria-controls="usersTable" data-dt-idx="1" tabindex="0">1</a></li>
-                                    <li class="paginate_button next disabled" id="usersTable_next"><a href="#" aria-controls="usersTable" data-dt-idx="2" tabindex="0">上一页</a></li>
-                                    </ul>
+                                    {{--<ul class="pagination"><li class="paginate_button previous disabled" id="usersTable_previous">--}}
+                                    {{--<a href="#" aria-controls="usersTable" data-dt-idx="0" tabindex="0">下一页</a></li>--}}
+                                    {{--<li class="paginate_button active"><a href="#" aria-controls="usersTable" data-dt-idx="1" tabindex="0">1</a></li>--}}
+                                    {{--<li class="paginate_button next disabled" id="usersTable_next"><a href="#" aria-controls="usersTable" data-dt-idx="2" tabindex="0">上一页</a></li>--}}
+                                    {{--</ul>--}}
                                 </div>
                             </div>
                         </div>
