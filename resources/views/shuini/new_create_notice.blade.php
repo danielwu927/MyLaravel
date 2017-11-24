@@ -143,7 +143,7 @@
                     <div class="box-header with-border">
                         <h3 class="box-title">填写通知信息</h3>
                     </div>
-                    <form role="form" method="post" action="create_notice.php">
+                    <form role="form" method="post" action="{{url('create_notice/create')}}">
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="title">标题</label>

@@ -33,7 +33,7 @@ Route::group(['prefix'=>'admin'],function (){         //后台管理路由组
     Route::get('new_create_news.php',function (){
         return view('shuini.new_create_news');
     });
-    Route::get('new_create_notice.php',function (){
+    Route::get('new_create_notice.blade.php',function (){
         return view('shuini.new_create_notice');
     });
 
@@ -46,7 +46,7 @@ Route::group(['prefix'=>'admin'],function (){         //后台管理路由组
         return view('shuini.notice_list');
     }
     );
-    Route::post('create_notice.php','ArticleController@create');
+    Route::post('create_notice/create','ArticleController@create');
 
     Route::get('new_create_questionnaire_template.php',function (){
         return view('shuini.new_create_questionnaire_template');

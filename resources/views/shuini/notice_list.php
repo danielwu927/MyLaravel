@@ -141,7 +141,7 @@
                     </div>
                 </div> <!-- row -->
                 <div class="content body">
-                <a href="new_create_notice.php" class="btn btn-primary btn-flat" id="createNew_inform">新建通知</a>
+                <a href="new_create_notice.blade.php" class="btn btn-primary btn-flat" id="createNew_inform">新建通知</a>
                 <div class="box box-body box-primary">
                     <div id="newsTable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
                         <div class="row">

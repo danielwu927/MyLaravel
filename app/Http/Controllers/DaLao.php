@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use  App\User;
-use Illuminate\Support\Facades\Redirect;
+use App\User;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 
 /**
  * 后台部分页面的控制器
@@ -102,7 +101,7 @@ class DaLao extends Controller
      *
      */
 
-    function multiConditionQuery(){
+    public function multiConditionQuery(){
     //    $query = DB::table('users');
 
 //        foreach ($conditions as $condition) {
