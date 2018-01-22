@@ -43,7 +43,7 @@ return [
             'driver' => 'mysql',
             'host'    => 'localhost',
             'database' => 'laravel5_localtest',
-            'port'     => '8889',
+            'port'     => '3306',
             'username' =>'root',
             'password' => '123456',
             'unix_socket' => env('DB_SOCKET', 'localhost:/Applications/MAMP/tmp/mysql/mysql.sock'),
