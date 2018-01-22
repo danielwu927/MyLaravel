@@ -16,3 +16,5 @@ yarn-error.log
 app/Http/Controllers/ArticleController.php
 database/migrations/2017_08_15_020601_create_article_table.php
 
+
+!/config/database.php
