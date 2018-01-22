@@ -86,8 +86,13 @@
         } /*__INSPECT_SEPERATOR__*/
         /* Injected CSS Code */
     </style>
+<<<<<<< HEAD
 
     <form class="jotform-form" action="/getdata" method="post" name="form_73111913322444" id="73111913322444" accept-charset="utf-8">
+=======
+<div align="center">
+    <form   class="jotform-form" action="/getdata" method="post" name="form_73111913322444" id="73111913322444" accept-charset="utf-8">
+>>>>>>> 5480d2f1edfdaa91e77dfafcb291ff6d617890ab
         <input type="hidden" name="formID" value="73111913322444" />
         <input type="hidden" name="_token" value="<?php  echo csrf_token(); ?>" />
         <div class="form-all">
@@ -690,7 +695,11 @@
         {{--</div>--}}
     </form>
     <script type="text/javascript">JotForm.ownerView=true;</script>
+<<<<<<< HEAD
 
+=======
+</div>
+>>>>>>> 5480d2f1edfdaa91e77dfafcb291ff6d617890ab
 {{--@endsection--}}
 </body>
 </html>

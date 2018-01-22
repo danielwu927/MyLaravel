@@ -33,7 +33,7 @@ class SitesController extends Controller
           case 2:return view('hello');
           case 3:return view('researcher');
           case 4:return view('expert');
-          case 5:return redirect('admin/home');
+          case 5:return redirect('admin/admin_home.blade.php');
           default: return redirect('/');
 
 

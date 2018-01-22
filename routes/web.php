@@ -113,10 +113,13 @@ Route::group(['prefix'=>'admin'],function (){         //后台管理路由组
 });
 
 //测试用的路由----------start---------------
-Route::get("/test", function (){return view( 'test');});
+Route::get("/test", function (){return view( 'shuini.questionnaire');});
 
 Route::any("/query",'DaLao@multiConditionQuery');
 
 Route::any("cre_user",'DaLao@cre_user');
+
+Route::any("/getdata",'DaLao@getdata');
+
 
 //测试用的路由----------end---------------
