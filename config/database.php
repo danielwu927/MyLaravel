@@ -45,7 +45,7 @@ return [
             'database' => 'laravel5_localtest',
             'port'     => '3306',
             'username' =>'root',
-            'password' => '123456',
+            'password' => 'root',
             'unix_socket' => env('DB_SOCKET', 'localhost:/Applications/MAMP/tmp/mysql/mysql.sock'),
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
