@@ -46,7 +46,7 @@ return [
             'port'     => '8889',
             'username' =>'root',
             'password' => '123456',
-            //'unix_socket' => env('DB_SOCKET', 'localhost:/Applications/MAMP/tmp/mysql/mysql.sock'),
+            'unix_socket' => env('DB_SOCKET', 'localhost:/Applications/MAMP/tmp/mysql/mysql.sock'),
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
             'strict' => false,
