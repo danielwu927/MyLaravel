@@ -144,7 +144,7 @@ class DaLao extends Controller
             $q->fqpf_klw_pfnd_yt=$fqpf_klw[0][1];
         //窑尾
              $q->fqpf_klw_npfl_yw=$fqpf_klw[1][0];
-             $q->fqpf_klw_pfbd_yw=$fqpf_klw[1][1];
+             $q->fqpf_klw_pfnd_yw=$fqpf_klw[1][1];
 
         //煤磨
              $q->fqpf_klw_npfl_mm=$fqpf_klw[3][0];
