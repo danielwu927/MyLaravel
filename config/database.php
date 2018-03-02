@@ -41,7 +41,7 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host'    => 'localhost',
+            'host'    => '127.0.0.1',
             'database' => 'laravel5_localtest',
             'port'     => '3306',
             'username' =>'root',

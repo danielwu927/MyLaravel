@@ -2,18 +2,13 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
-use App\User;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Redirect;
-=======
+
 use App\Questionnaire;
 use Illuminate\Http\Request;
 use  App\User;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\DB;
 use PhpParser\Node\Expr\Array_;
->>>>>>> 5480d2f1edfdaa91e77dfafcb291ff6d617890ab
 
 /**
  * 后台部分页面的控制器
